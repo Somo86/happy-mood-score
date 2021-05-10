@@ -1,0 +1,24 @@
+<div>
+  <h3 class="text-2xl leading-9 font-extrabold text-gray-900">
+    <%= t 'newTodoForm.1on1Hint' %>
+  </h3>
+  <%= tw_form_with model: [:admin, Note.new(receiver_id: params[:receiver_id])], class: "px-10 py-4" do |form| %>
+    <%= form.collection_select_input :receiver_id, @employees, :id, :name %>
+    <%= form.area_input :description %>
+    <%= form.check_input :shared %>
+    <div class="mt-8 border-t border-gray-200 pt-5">
+      <div class="flex justify-end">
+        <span class="inline-flex rounded-md shadow-sm">
+          <button type="button" class="cancel-button py-2 px-4 border border-gray-300 rounded-md text-sm leading-5 font-medium text-gray-700 hover:text-gray-500 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:bg-gray-50 active:text-gray-800 transition duration-150 ease-in-out">
+            <%= t 'feedbackList.cancel' %>
+          </button>
+        </span>
+        <span class="ml-3 inline-flex rounded-md shadow-sm">
+          <button type="submit" class="inline-flex justify-center py-2 px-4 border border-transparent text-sm leading-5 font-medium rounded-md text-white bg-green-600 hover:bg-green-500 focus:outline-none focus:border-green-700 focus:shadow-outline-green active:bg-green-700 transition duration-150 ease-in-out">
+            <%= t 'newTodoForm.save1on1' %>
+          </button>
+        </span>
+      </div>
+    </div>
+  <% end %>
+</div>

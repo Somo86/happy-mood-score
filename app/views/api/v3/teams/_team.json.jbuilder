@@ -1,0 +1,12 @@
+json.id team.uuid
+json.name team.name
+json.totalEmployees team.employees_count
+json.hms team.hms
+json.involvement team.involvement
+json.worseThanExpected team.results_bad
+json.betterThanExpected team.results_good
+json.asExpected team.results_fine
+json.high5Received team.high5_received
+json.high5Given team.high5_given
+json.numberComments team.comments
+json.totalVotes team.feedback_given

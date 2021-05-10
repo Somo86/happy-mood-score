@@ -1,0 +1,25 @@
+<% if @user.admin? %>
+Welcome <%= @user.email %>
+
+To activate your account follow this link: <%= @url %>
+
+We are here to help. If you have any questions or you just want to send us your comments, suggestions or ideas, please email us at info@happymoodscore.com or just replay to this email.
+
+Thank you very much for your interest in Happy Mood Score.
+
+The HMS team
+<% else %>
+Welcome <%= @user.email %>
+
+<%= @user.employee.company.name %> has joined Happy Mood Score, a tool to manage talent and has created an account for you.
+
+With your account you can give feedback, send High 5 (appreciation rewards) to your colleagues, add your ideas or comment other people's ideas.
+
+To activate your new account and create a password, please follow this link: <%= @url %>
+
+We are here to help. If you have any questions or you just want to send us your comments, suggestions or ideas, please email us at info@happymoodscore.com or just replay to this email.
+
+Thank you very much for joining Happy Mood Score.
+
+The HMS team
+<% end %>

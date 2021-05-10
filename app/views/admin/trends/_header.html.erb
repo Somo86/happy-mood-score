@@ -1,0 +1,19 @@
+<div class="md:flex md:items-center md:justify-between">
+  <div class="flex-1 min-w-0">
+    <h1 class="text-2xl font-bold leading-7 text-purple-900 sm:text-3xl sm:leading-9 sm:truncate">
+      <%= title %>
+    </h1>
+  </div>
+  <div class="mt-4 flex md:mt-0 md:ml-4">
+    <div class="mr-4">
+      <span class="rounded-md shadow-sm">
+        <%= link_to link, class: "inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-yellow-700 bg-yellow-100 hover:bg-yellow-50 focus:outline-none focus:border-yellow-300 focus:shadow-outline-yellow active:bg-yellow-200 transition ease-in-out duration-150" do %>
+          <svg class="-ml-1 mr-2 h-5 w-5" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" stroke="currentColor" viewBox="0 0 24 24">
+            <path d="M16 8v8m-4-5v5m-4-2v2m-2 4h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+          </svg>
+          <%= link_title %>
+        <% end %>
+      </span>
+    </div>
+  </div>
+</div>

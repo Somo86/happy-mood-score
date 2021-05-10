@@ -1,0 +1,25 @@
+<div class="bg-white overflow-hidden shadow rounded-lg">
+  <div class="px-4 py-5 sm:p-6">
+    <dl>
+      <dt class="text-md leading-5 font-medium text-gray-500 truncate">
+        <%= title %>
+      </dt>
+      <dd class="flex items-baseline">
+        <p class="text-3xl"><%= value %></p>
+        <div class="ml-2 flex items-baseline text-sm leading-5 font-semibold text-<%= trend_color value %>-600">
+          <% if value.positive? %>
+          <svg class="self-center flex-shrink-0 h-5 w-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M5.293 9.707a1 1 0 010-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 01-1.414 1.414L11 7.414V15a1 1 0 11-2 0V7.414L6.707 9.707a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+          </svg>
+        <% end %>
+          <% if value.negative? %>
+          <svg class="self-center flex-shrink-0 h-5 w-5 text-red-500" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M14.707 10.293a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 111.414-1.414L9 12.586V5a1 1 0 012 0v7.586l2.293-2.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+          </svg>
+        <% end %>
+          <%=  trend_value  %>&nbsp;<%=  trend_title  %>
+        </div>
+      </dd>
+    </dl>
+  </div>
+</div>

@@ -1,0 +1,41 @@
+  <div class="md:flex md:items-center md:justify-between">
+    <div class="flex-1 min-w-0">
+      <h2 class="text-2xl font-bold leading-7 text-purple-900 sm:text-3xl sm:leading-9 sm:truncate">
+        <%= @poll.name  %>
+      </h2>
+    </div>
+    <div class="mt-4 flex items-center md:mt-0 md:ml-4">
+      <div class="mr-4">
+        <span class="rounded-md shadow-sm">
+          <%= link_to t('pollsIndex.backToList'), admin_polls_url, class: "inline-flex items-center font-medium text-indigo-600 hover:text-indigo-500 transition ease-in-out duration-150" %>
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <turbo-frame id="polls-form">
+    <div class="mt-6 px-4 py-5 bg-white shadow sm:rounded-lg sm:p-6">
+      <%= tw_form_with model: [:admin, @poll], class: "px-10 py-4" do |form| %>
+        <%= form.text_input :title, message: t('editContentForm.titleHelp') %>
+        <%= form.area_input :description, message: t('editContentForm.descriptionHelp') %>
+        <%= form.check_input :show_comments, message: t('editContentForm.showCommentsHelp') %>
+        <div class="contentOptions">
+          <%= form.fields_for :poll_options do |poll_option| %>
+            <%= poll_option.text_input :title, required: true, label: t("editContentForm.question#{poll_option.object.value}"), message: t("editContentForm.question#{poll_option.object.value}Help") %>
+          <% end %>
+        </div>
+        <div class="mt-8 border-t border-gray-200 pt-5">
+          <div class="flex justify-end">
+            <span class="inline-flex rounded-md shadow-sm">
+              <%= link_to t('editContentForm.cancel'), admin_polls_url, class: "py-2 px-4 border border-gray-300 rounded-md text-sm leading-5 font-medium text-gray-700 hover:text-gray-500 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:bg-gray-50 active:text-gray-800 transition duration-150 ease-in-out", target: '_top' %>
+            </span>
+            <span class="ml-3 inline-flex rounded-md shadow-sm">
+              <button type="submit" class="inline-flex justify-center py-2 px-4 border border-transparent text-sm leading-5 font-medium rounded-md text-white bg-green-600 hover:bg-green-500 focus:outline-none focus:border-green-700 focus:shadow-outline-green active:bg-green-700 transition duration-150 ease-in-out">
+                <%= t 'editContentForm.save'  %>
+              </button>
+            </span>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </turbo-frame>

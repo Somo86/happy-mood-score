@@ -1,0 +1,38 @@
+    <div class="md:flex md:items-center md:justify-between">
+      <div class="flex-1 min-w-0">
+        <h2 class="text-2xl font-bold leading-7 text-purple-900 sm:text-3xl sm:leading-9 sm:truncate">
+          <%= @poll.name  %>
+        </h2>
+      </div>
+      <div class="mt-4 flex items-center md:mt-0 md:ml-4">
+        <div class="mr-4">
+          <span class="rounded-md shadow-sm">
+            <%= link_to t('pollsIndex.backToList'), admin_polls_url, class: "inline-flex items-center font-medium text-indigo-600 hover:text-indigo-500 transition ease-in-out duration-150" %>
+          </span>
+        </div>
+        <div class="mr-4">
+          <span class="rounded-md shadow-sm">
+            <%= link_to t('pollsShow.viewPage'), new_poll_vote_url(company: @poll.company.slug, slug: @poll.slug),  target: "_blank", class: "add-poll inline-flex items-center px-4 py-2 border border-transparent text-sm leading-5 font-medium rounded-md text-white bg-yellow-600 hover:bg-yellow-500 focus:outline-none focus:border-yellow-700 focus:shadow-outline-yellow active:bg-yellow-700 transition ease-in-out duration-150" %>
+          </span>
+        </div>
+        <div class="mr-4">
+          <span class="rounded-md shadow-sm">
+            <%= link_to t('pollsShow.editContent'), edit_admin_poll_url(@poll), class: "add-poll inline-flex items-center px-4 py-2 border border-transparent text-sm leading-5 font-medium rounded-md text-white bg-teal-600 hover:bg-teal-500 focus:outline-none focus:border-teal-700 focus:shadow-outline-teal active:bg-teal-700 transition ease-in-out duration-150" %>
+          </span>
+        </div>
+      </div>
+    </div>
+    <% if @poll.poll_votes.size.zero?  %>
+      <div class="mt-10">
+      <%= render layout: 'shared/alert_info', locals: { title: t('pollsShow.noFeedback'), message: t('pollsShow.empty'), type: 'info' } do %>
+      <% end %>
+      </div>
+    <% else  %>
+    <div class="mt-6">
+      <%# > dashboardUserVotes resultsHappy=poll.resultsGood resultsFine=poll.resultsFine resultsBad=poll.resultsBad  %>
+      <%# #if dashboardInfo %>
+      <%# > pollFeedbackGraph poll=poll  %>
+      <%# /if %>
+    </div>
+    <%= render partial: 'admin/polls/messages_list', locals: { messages: @poll.poll_votes.with_comments }  %>
+    <% end %>

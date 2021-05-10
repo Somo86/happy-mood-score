@@ -1,0 +1,65 @@
+<div class="mt-6 bg-white shadow px-4 py-5 sm:rounded-lg sm:p-6">
+  <div class="md:grid md:grid-cols-3 md:gap-6">
+    <div class="md:col-span-1">
+      <h3 class="text-lg font-medium leading-6 text-gray-900"><%= t 'companySettings.title' %></h3>
+      <p class="mt-1 text-sm leading-5 text-gray-500">
+      <%= t 'companySettings.settingsInfo' %>
+      </p>
+    </div>
+    <div class="mt-6 md:col-span-2">
+      <%= tw_form_with model: [:admin, @company], class: "px-10 py-4", data: { turbo: false } do |form| %>
+        <%= render 'shared/form/errors', model: @company %>
+        <div class="grid grid-cols-6 gap-6">
+          <div class="col-span-6 sm:col-span-3">
+            <%= form.text_input :name, autofocus: true %>
+          </div>
+          <div class="col-span-6 sm:col-span-3">
+            <%= form.text_input :vat_number %>
+          </div>
+        </div>
+        <div class="grid grid-cols-6 gap-6">
+          <div class="col-span-6 sm:col-span-3">
+            <%= form.text_input :address %>
+          </div>
+          <div class="col-span-6 sm:col-span-3">
+            <%= form.text_input :city %>
+          </div>
+        </div>
+        <div class="grid grid-cols-6 gap-6">
+          <div class="col-span-6 sm:col-span-3">
+            <%= form.text_input :country %>
+          </div>
+          <div class="col-span-6 sm:col-span-3">
+            <label for="company[language_id]" class="block text-sm font-medium text-gray-700">
+              <%= t 'companySettings.language' %>
+            </label>
+            <%= form.collection_select_input :language_id, Language.all, :id, :name %>
+          </div>
+        </div>
+        <div class="grid grid-cols-6 gap-6">
+          <div class="col-span-6 sm:col-span-3">
+            <label for="company[date_format]" class="block text-sm font-medium text-gray-700">
+              <%= t 'companySettings.dateFormat' %>
+            </label>
+            <%= form.collection_select_input :date_format, Company.date_formats_for_select, :first, :last %>
+          </div>
+          <div class="col-span-6 sm:col-span-3">
+            <label for="company[timezone]" class="block text-sm font-medium text-gray-700">
+              <%= t 'companySettings.timezone' %>
+            </label>
+            <%= form.time_zone_select :timezone, nil, {}, class: "shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md" %>
+          </div>
+        </div>
+        <div class="mt-8 border-t border-gray-200 pt-5">
+          <div class="flex justify-end">
+            <span class="ml-3 inline-flex rounded-md shadow-sm">
+              <button type="submit" class="inline-flex justify-center py-2 px-4 border border-transparent text-sm leading-5 font-medium rounded-md text-white bg-green-600 hover:bg-green-500 focus:outline-none focus:border-green-700 focus:shadow-outline-green active:bg-green-700 transition duration-150 ease-in-out">
+                <%= t 'companySettings.update' %>
+              </button>
+            </span>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

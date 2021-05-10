@@ -1,0 +1,17 @@
+Hello <%= @message_data[:user_name] %>:
+
+How was your <%= @message_data[:period_name] %>?
+
+As expected. <%= new_vote_url(@message_data[:vote_id], 'fine') %>
+
+Better than expected. <%= new_vote_url(@message_data[:vote_id], 'good') %>
+
+Worse than expected. <%= new_vote_url(@message_data[:vote_id], 'bad') %>
+
+After your vote, please, explain the major milestones of the past <%= @message_data[:period_name] %>: Accomplishments, pending tasks, work planned and any other info you think it's relevant. Only the team manager can see this message.
+
+<%= @message_data[:company_name] %> cares about their employees and is using Happy Mood Score to track how they feel, and that includes you.
+
+If you don't know what to do with this email or you think you have received it by mistake please contact <%= "#{@message_data[:admin_name]} - #{@message_data[:admin_email]}" %>
+
+https://www.happymoodscore.com

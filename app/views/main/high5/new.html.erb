@@ -1,0 +1,10 @@
+<turbo-frame id="high5-new">
+  <h2 class="text-xl font-bold leading-7 text-purple-900 sm:text-2xl sm:leading-9 sm:truncate">
+    <%= @receiver.name %>
+  </h2>
+  <% if @success %>
+    <%= render partial: 'main/high5/sent' %>
+  <% else %>
+    <%= render partial: 'main/high5/form' %>
+  <% end %>
+</turbo-frame>

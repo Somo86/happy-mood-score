@@ -1,0 +1,164 @@
+  <div class="md:flex md:items-center md:justify-between">
+    <div class="flex-1 min-w-0">
+      <h2 class="text-2xl font-bold leading-7 text-purple-900 sm:text-3xl sm:leading-9 sm:truncate">
+        <%= t 'employeesCsv.importFile'  %>
+      </h2>
+    </div>
+  </div>
+  <div class="mt-6 bg-white shadow sm:rounded-lg">
+    <% if @results %>
+      <%= render 'result' %>
+    <% end %>
+    <div class="px-4 py-5 sm:p-6">
+      <h3 class="text-lg leading-6 font-medium text-gray-900">
+        <%= t 'employeesCsv.howTo'  %>
+      </h3>
+      <div class="mt-2 sm:flex sm:items-start sm:justify-between">
+        <div class="max-w-xl text-sm leading-5 text-gray-500">
+          <p>
+          <%= t 'employeesCsv.exportFile'  %>
+          </p>
+          <p class="mt-2 font-bold text-md">
+          <%= t 'employeesCsv.requiredFields'  %>
+          </p>
+        </div>
+        <div class="mt-6 sm:mt-0 sm:ml-6 sm:flex-shrink-0 sm:flex sm:items-center">
+          <%= form_with url: admin_uploads_url, multipart: true, data: { turbo: false } do %>
+            <div class="flex flex-col">
+              <input name="employees" class="file-upload-input mb-4" required type="file">
+              <button type="submit" class="inline-flex justify-center py-2 px-4 border border-transparent text-sm leading-5 font-medium rounded-md text-white bg-teal-600 hover:bg-teal-500 focus:outline-none focus:border-teal-700 focus:shadow-outline-green active:bg-teal-700 transition duration-150 ease-in-out">
+                <%= t 'addEmployee.uploadCsv' %>
+              </button>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="mt-6 bg-white shadow px-4 py-5 sm:rounded-lg sm:p-6">
+    <div class="md:grid md:grid-cols-3 md:gap-6">
+      <div class="md:col-span-1">
+        <h3 class="text-lg font-medium leading-6 text-gray-900">
+          <%= t 'employeesCsv.exampleTxt'  %>
+        </h3>
+        <p class="mt-1 text-sm leading-5 text-gray-500">
+        <%= t 'employeesCsv.createSpreadsheet'  %>
+        </p>
+        <p class="mt-1 text-sm leading-5 text-gray-500">
+        <%= t 'employeesCsv.addOneColumn'  %>
+        </p>
+        <p class="mt-1 text-sm leading-5 text-gray-500">
+        <%= t 'employeesCsv.saveAs'  %>
+        </p>
+      </div>
+      <div class="mt-6 md:mt-0 md:col-span-2">
+        <table class="min-w-full table table-stripped">
+          <thead>
+            <tr>
+              <th class="px-6 py-3 border-b border-gray-200 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">
+
+              </th>
+              <th class="px-6 py-3 border-b border-gray-200 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">
+                A
+              </th>
+              <th class="px-6 py-3 border-b border-gray-200 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">
+                B
+              </th>
+              <th class="px-6 py-3 border-b border-gray-200 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">
+                C
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 font-medium text-gray-900">
+                1
+              </td>
+              <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 font-medium text-gray-900">
+                <%= t 'employeesCsv.employeeEmail', id: '1'  %>
+              </td>
+              <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 font-medium text-gray-900">
+                <%= t 'employeesCsv.employeeName', id: '1'  %>
+              </td>
+              <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 font-medium text-gray-900">
+                <%= t 'employeesCsv.teamName', id: 'A'  %>
+              </td>
+            </tr>
+            <tr>
+              <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 font-medium text-gray-900">
+                2
+              </td>
+              <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 font-medium text-gray-900">
+                <%= t 'employeesCsv.employeeEmail', id: '2'  %>
+              </td>
+              <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 font-medium text-gray-900">
+                <%= t 'employeesCsv.employeeName', id: '2'  %>
+              </td>
+              <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 font-medium text-gray-900">
+                <%= t 'employeesCsv.teamName', id: 'A'  %>
+              </td>
+            </tr>
+            <tr>
+              <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 font-medium text-gray-900">
+                3
+              </td>
+              <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 font-medium text-gray-900">
+                <%= t 'employeesCsv.employeeEmail', id: '3'  %>
+              </td>
+              <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 font-medium text-gray-900">
+                <%= t 'employeesCsv.employeeName', id: '3'  %>
+              </td>
+              <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 font-medium text-gray-900">
+                <%= t 'employeesCsv.teamName', id: 'A'  %>
+              </td>
+            </tr>
+            <tr>
+              <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 font-medium text-gray-900">
+                4
+              </td>
+              <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 font-medium text-gray-900">
+                <%= t 'employeesCsv.employeeEmail', id: '4'  %>
+              </td>
+              <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 font-medium text-gray-900">
+                <%= t 'employeesCsv.employeeName', id: '4'  %>
+              </td>
+              <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 font-medium text-gray-900">
+                <%= t 'employeesCsv.teamName', id: 'B'  %>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <div class="mt-6 bg-white shadow px-4 py-5 sm:rounded-lg sm:p-6">
+    <div class="md:grid md:grid-cols-3 md:gap-6">
+      <div class="md:col-span-1">
+        <h3 class="text-lg font-medium leading-6 text-gray-900">
+          <%= t 'employeesCsv.exampleCsv'  %>
+        </h3>
+        <p class="mt-1 text-sm leading-5 text-gray-500">
+        <%= t 'employeesCsv.descriptionCsv'  %>
+        </p>
+        <p class="mt-1 text-sm leading-5 text-gray-500">
+        <%= t 'employeesCsv.useComma'  %>
+        </p>
+      </div>
+      <div class="mt-6 md:mt-0 md:col-span-2">
+        <ul>
+          <li class="px-6 py-1 whitespace-no-wrap text-sm leading-5 font-medium text-gray-900">
+            <%= t 'employeesCsv.employeeEmail', id: '1'  %>,<%= t 'employeesCsv.employeeName', id: '1'  %>,<%= t 'employeesCsv.teamName', id: 'A' %>
+          </li>
+          <li class="px-6 py-1 whitespace-no-wrap text-sm leading-5 font-medium text-gray-900">
+            <%= t 'employeesCsv.employeeEmail', id: '2'  %>,<%= t 'employeesCsv.employeeName', id: '2'  %>,<%= t 'employeesCsv.teamName', id: 'A' %>
+          </li>
+          <li class="px-6 py-1 whitespace-no-wrap text-sm leading-5 font-medium text-gray-900">
+            <%= t 'employeesCsv.employeeEmail', id: '3'  %>,<%= t 'employeesCsv.employeeName', id: '3'  %>,<%= t 'employeesCsv.teamName', id: 'A' %>
+          </li>
+          <li class="px-6 py-1 whitespace-no-wrap text-sm leading-5 font-medium text-gray-900">
+            <%= t 'employeesCsv.employeeEmail', id: '4'  %>,<%= t 'employeesCsv.employeeName', id: '4'  %>,<%= t 'employeesCsv.teamName', id: 'B' %>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>

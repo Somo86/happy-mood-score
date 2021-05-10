@@ -1,0 +1,19 @@
+<div class="my-6 bg-white shadow sm:rounded-lg">
+  <div class="px-4 py-5 sm:p-6">
+    <h3 class="text-lg leading-6 font-medium text-gray-900">
+      <%= t 'companySlackIntegration.process'  %>
+    </h3>
+    <div class="mt-2 sm:flex sm:items-start sm:justify-between">
+      <div class="max-w-xl text-sm leading-5 text-gray-500">
+        <p>
+        <%= t 'companySlackIntegration.howTo1'  %>
+        </p>
+      </div>
+      <div class="mt-6 sm:mt-0 sm:ml-6 sm:flex-shrink-0 sm:flex sm:items-center">
+        <a href="https://slack.com/oauth/authorize?scope=commands,chat:write:bot&client_id=44247266034.132390926738&state=<%= @company.id %>">
+          <img alt="Add to Slack" height="40" width="139" src="https://platform.slack-edge.com/img/add_to_slack.png" srcset="https://platform.slack-edge.com/img/add_to_slack.png 1x, https://platform.slack-edge.com/img/add_to_slack@2x.png 2x" />
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

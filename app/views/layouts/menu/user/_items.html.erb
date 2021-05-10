@@ -1,0 +1,11 @@
+<div class="hidden select-bg fixed inset-0 transition-opacity z-0" data-sidebar-target="userMenuLayout">
+  <div class="absolute inset-0 bg-gray-500 opacity-75" data-action="click->sidebar#toggleUserMenu"></div>
+</div>
+<div data-sidebar-target="userMenu" class="hidden origin-bottom-left absolute bottom-24 left-4 z-10 mt-2 w-48 rounded-md shadow-lg">
+  <div class="py-1 rounded-md bg-white shadow-xs" role="menu" aria-orientation="vertical" aria-labelledby="user-menu">
+    <%= link_to t('topUser.editEmployee'), edit_main_employee_url, class: "employee-menu-item block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition ease-in-out duration-150" %>
+    <%= link_to t('sideAdmin.activity'), admin_activities_url, class: "employee-menu-item block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition ease-in-out duration-150" %>
+    <%= link_to t('topUser.contactUs'), new_main_contact_path, class: "employee-menu-item block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition ease-in-out duration-150" %>
+    <%= link_to t('topUser.logOut'), logout_url, method: :post, class: "employee-menu-item block px-4 py-2 border-t border-gray-200 text-sm text-gray-700 hover:bg-gray-100 transition ease-in-out duration-150" %>
+  </div>
+</div>

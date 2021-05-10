@@ -1,0 +1,9 @@
+<span class="inline-flex rounded-md shadow-sm">
+  <%= link_to main_notes_url(closed: closed ? 0 : 1), class: "toggle-feedback inline-flex items-center px-4 py-2 rounded-md border border-gray-300 px-4 py-2 bg-white text-sm leading-5 font-medium text-gray-700 hover:text-gray-500 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:bg-gray-50 active:text-gray-800 transition ease-in-out duration-150" do %>
+    <svg class="-ml-1 mr-2 h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
+      <path d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z">
+      </path>
+    </svg>
+    <%= closed ? t('todosList.showActive') : t('todosList.showClosed') %>
+<% end %>
+</span>

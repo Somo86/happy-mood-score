@@ -1,0 +1,13 @@
+<turbo-frame id="high5-admin">
+  <div class="md:flex md:items-center md:justify-between">
+    <div class="flex-1 min-w-0">
+      <h2 class="text-2xl font-bold leading-7 text-purple-900 sm:text-3xl sm:leading-9 sm:truncate">
+        <%= t 'high5Activity.ranking' %>
+      </h2>
+    </div>
+  </div>
+  <div class="mt-6 p-4 flex">
+  <%= render partial: 'admin/high5/search' %>
+  <%= render partial: 'admin/high5/high5s' %>
+  </div>
+</turbo-frame>

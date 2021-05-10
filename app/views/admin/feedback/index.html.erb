@@ -1,0 +1,53 @@
+<div class="md:flex md:items-center md:justify-between">
+  <div class="flex-1 min-w-0">
+    <h2 class="text-2xl font-bold leading-7 text-purple-900 sm:text-3xl sm:leading-9 sm:truncate">
+      <%=  t "feedbackList.feedback"  %>
+    </h2>
+  </div>
+  <div class="mt-4 flex md:mt-0 md:ml-4">
+    <% if @teams.size > 1  %>
+      <%= render 'filter_teams' %>
+    <% end  %>
+    <%= render 'filter_buttons' %>
+  </div>
+</div>
+<% if @any_feedback  %>
+  <div class="mt-6 bg-white shadow overflow-hidden sm:rounded-md">
+    <div class="bg-white px-4 py-5 border-b border-gray-200 sm:px-6">
+      <div class="-ml-4 -mt-2 flex items-center justify-between flex-wrap sm:flex-no-wrap">
+        <div class="ml-4 mt-2">
+          <h3 class="text-lg leading-6 font-medium text-gray-900">
+            <% if @filter[:name] %>
+              <%= @filter[:name] %> -
+            <% end %>
+            <% if @filter[:new].to_i  == 1  %>
+              <%= t 'feedbackList.filterUnread'  %>
+            <% else %>
+              <%= t 'feedbackList.showAll'  %>
+            <% end %>
+          </h3>
+        </div>
+        <% if @filter[:new].to_i  == 1  %>
+          <div class="ml-4 mt-2 flex-shrink-0">
+            <span class="inline-flex rounded-md shadow-sm">
+              <%= link_to admin_feedback_url(id: 'read'), method: :put, class: "inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-purple-700 bg-purple-100 hover:bg-purple-50 focus:outline-none focus:border-purple-300 focus:shadow-outline-purple active:bg-purple-200 transition ease-in-out duration-150" do %>
+                <svg class="-ml-0.5 mr-2 h-4 w-4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" stroke="currentColor" fill="none" viewBox="0 0 22 22">
+                  <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+                <%= t 'feedbackList.markAllRead'  %>
+              <% end %>
+            </span>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+  <div class="mt-6 py-6 bg-white">
+    <ul class="space-y-8">
+      <%= render partial: 'admin/feedback/feedback', collection: @feedback  %>
+    </ul>
+    <%= paginate @feedback %>
+  </div>
+<% else %>
+  <%= render 'empty' %>
+<% end %>

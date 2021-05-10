@@ -1,0 +1,5 @@
+<% if @has_votes %>
+  <%= render 'shared/dashboard/vote_distribution', votes: @employee %>
+<% else %>
+  <%= render 'main/feedback/empty' %>
+<% end %>

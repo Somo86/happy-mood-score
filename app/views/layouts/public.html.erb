@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="<%= I18n.locale %>">
+  <head>
+    <title>Free talent retention and feedback tool | Happy Mood Score</title>
+    <meta name="description" content="Feedback and employee engagement tool for agile companies, startups or companies with remote employees, distributed teams or digital nomads." />
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => 'reload' %>
+    <%= stylesheet_pack_tag 'application', 'data-turbolinks-track' => 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track' => 'reload' %>
+  </head>
+  <body class="font-sans antialiased text-gray-900">
+    <main class="py-6">
+          <% flash.each do |type, message| %>
+            <%= render 'shared/notice', type: type, message: message %>
+          <% end %>
+      <%= yield %>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,18 @@
+  <div class="md:flex md:items-center md:justify-between">
+    <div class="flex-1 min-w-0">
+      <h2 class="text-2xl font-bold leading-7 text-purple-900 sm:text-3xl sm:leading-9 sm:truncate">
+        <%=  t "feedbackList.feedback"  %>
+      </h2>
+    </div>
+  </div>
+  <% if @feedback.any?  %>
+    <turbo-frame id="feedback-list">
+      <div class="mt-6 py-6 bg-white">
+        <ul class="space-y-8">
+          <%= render partial: 'main/feedback/feedback', collection: @feedback  %>
+        </ul>
+      </div>
+    </turbo-frame>
+  <% else %>
+    <%= render 'main/feedback/empty' %>
+  <% end %>

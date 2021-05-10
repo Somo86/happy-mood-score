@@ -1,0 +1,33 @@
+<tr class="bg-white" id="<%= dom_id poll %>">
+  <turbo-stream action="update" target="<%= dom_id poll %>">
+    <template>
+      <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 font-medium text-gray-900">
+        <%= link_to poll.name, admin_poll_url(poll), class:"inline-flex items-center font-medium text-indigo-600 hover:text-indigo-500 transition ease-in-out duration-150", target: '_top' %>
+      </td>
+      <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 font-medium text-gray-900">
+        <%= link_to new_poll_vote_path(poll.company.slug, poll.slug), new_poll_vote_url(poll.company.slug, poll.slug), class:"inline-flex items-center font-medium text-indigo-600 hover:text-indigo-500 transition ease-in-out duration-150", target: '_new' %>
+      </td>
+      <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 font-medium text-gray-900">
+        <%= render partial: 'admin/polls/active', locals: { poll: poll } %>
+      </td>
+      <td class="px-6 py-4 whitespace-no-wrap text-sm text-right leading-5 font-medium text-gray-900">
+        <%= poll.poll_votes.size %>
+      </td>
+      <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 font-medium text-gray-900">
+        <div class="flex justify-end items-center">
+          <%= link_to t('pollsShow.editContent'), edit_admin_poll_url(poll),  class: "inline-flex mr-2 items-center px-2 py-1 border border-transparent text-xs leading-4 font-medium rounded text-teal-700 bg-teal-100 hover:bg-teal-50 focus:outline-none focus:border-teal-300 focus:shadow-outline-teal active:bg-teal-200 transition ease-in-out duration-150" %>
+          <% if !poll.active %>
+            <%= tw_form_with model: [:admin, poll], method: :delete, class: "px-2", data: { turbo: false }  do |form| %>
+              <button type="submit" class="remove inline-flex items-center px-2 py-1 border border-transparent text-xs leading-4 font-medium rounded text-red-700 bg-red-100 hover:bg-red-50 focus:outline-none focus:border-red-300 focus:shadow-outline-red active:bg-red-200 transition ease-in-out duration-150">
+                <svg class="-ml-1 mr-2 h-4 w-4" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" stroke="currentColor" viewBox="0 0 24 24">
+                  <path d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+                </svg>
+                <%=  t 'pollsIndex.remove'  %>
+              </button>
+            <% end %>
+          <% end %>
+        </div>
+      </td>
+    </template>
+  </turbo-stream>
+</tr>

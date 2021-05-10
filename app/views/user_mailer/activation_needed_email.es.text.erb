@@ -1,0 +1,25 @@
+<% if @user.admin? %>
+Bienvenido <%= @user.email %>
+
+Para activar tu cuenta, pulsa en el siguiente enlace: <%= @url %>
+
+Si tienes cualquier comentario, pregunta, sugerencia o idea puedes escribirnos a info@happymoodscore.com y estaremos encantados de ayudarte.
+
+Muchas gracias por tu interés en Happy Mood Score.
+
+El equipo de HMS.
+<% else %>
+Bienvenido <%= @user.email %>
+
+<%= @user.employee.company.name %> se ha unido a Happy Mood Score, una herramienta para la gestión del talento en la empresa, y te ha creado una cuenta.
+
+Con tu cuenta podrás dar feedback a tu manager, enviar High 5 a tus compañeros, añadir ideas o comentar y votar las ideas de otros.
+
+Para activar tu cuenta, pulsa en el siguiente enlace: <%= @url %>
+
+Si tienes cualquier comentario, pregunta, sugerencia o idea puedes escribirnos a info@happymoodscore.com y estaremos encantados de ayudarte.
+
+Muchas gracias por tu interés en Happy Mood Score.
+
+El equipo de HMS.
+<% end %>

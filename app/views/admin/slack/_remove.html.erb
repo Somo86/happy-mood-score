@@ -1,0 +1,28 @@
+<div class="my-6 bg-white shadow sm:rounded-lg">
+  <div class="px-4 py-5 sm:p-6">
+    <h3 class="text-lg leading-6 font-medium text-gray-900">
+      <%= t 'companySlackIntegration.activeToken'  %>
+    </h3>
+    <div class="mt-2 sm:flex sm:items-start sm:justify-between">
+      <div class="max-w-xl text-sm leading-5 text-gray-500">
+        <p>
+        <%= t 'companySlackIntegration.activeTokenInfo'  %>
+        </p>
+      </div>
+      <div class="mt-6 sm:mt-0 sm:ml-6 sm:flex-shrink-0 sm:flex sm:items-center">
+        <%= form_with url: admin_company_slack_url(@company), method: :delete, data: { turbo: false } do %>
+        <span class="inline-flex rounded-md shadow-sm">
+          <button type="submit" class="inline-flex items-center px-4 py-2 border border-transparent text-sm leading-5 font-medium rounded-md text-white bg-red-600 hover:bg-red-500 focus:outline-none focus:border-red-700 focus:shadow-outline-red active:bg-red-700 transition ease-in-out duration-150">
+            <%= t 'companySlackIntegration.removeToken' %>
+          </button>
+        </span>
+      <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="mt-4">
+  <div class="-mx-2 -my-1.5 flex">
+    <%= link_to t('companySlackIntegration.editEmployees'), admin_employees_url, class: "px-2 py-1.5 rounded-md text-sm leading-5 font-medium text-blue-800 hover:bg-blue-100 focus:outline-none focus:bg-blue-100 transition ease-in-out duration-150" %>
+  </div>
+</div>

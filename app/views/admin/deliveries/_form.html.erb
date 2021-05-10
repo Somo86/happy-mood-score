@@ -1,0 +1,42 @@
+  <div class="mt-6 bg-white shadow px-4 py-5 sm:rounded-lg sm:p-6">
+    <div class="md:grid md:grid-cols-3 md:gap-6">
+      <div class="md:col-span-1">
+        <h3 class="text-lg font-medium leading-6 text-gray-900"><%= t 'companyDeliveryForm.deliveryTitle'  %></h3>
+        <p class="mt-1 text-sm leading-5 text-gray-500">
+          <%= t 'companyDeliveryForm.deliveryInfo'  %>
+        </p>
+      </div>
+      <div class="mt-6 md:col-span-2" data-controller="frequency">
+        <%= tw_form_with model: [:admin, @company], class: "px-10 py-4", data: { turbo: false } do |form| %>
+          <div>
+            <label for="company[frequency]" class="block text-sm font-medium text-gray-700">
+              <%= t 'companySettings.frequency' %>
+            </label>
+            <%= form.collection_select_input :frequency, Company.frequencies_for_select, :first, :last, {}, data: { action: "frequency#update", } %>
+          </div>
+          <div class="hidden mt-4" data-frequency-target="select">
+            <label for="company[weekday]" class="block text-sm font-medium text-gray-700">
+              <%= t 'companySettings.weekday' %>
+            </label>
+            <%= form.collection_select_input :weekday, Company.weekdays_for_select, :first, :last %>
+          </div>
+          <div class="mt-4">
+            <label for="company[hour]" class="block text-sm font-medium text-gray-700">
+              <%= t 'companySettings.hour' %>
+            </label>
+            <%= form.collection_select_input :hour, Company.hours_for_select, :first, :last %>
+          </div>
+          <div class="mt-8 border-t border-gray-200 pt-5">
+            <div class="flex justify-end">
+              <span class="ml-3 inline-flex rounded-md shadow-sm">
+                <button type="submit" class="inline-flex justify-center py-2 px-4 border border-transparent text-sm leading-5 font-medium rounded-md text-white bg-green-600 hover:bg-green-500 focus:outline-none focus:border-green-700 focus:shadow-outline-green active:bg-green-700 transition duration-150 ease-in-out">
+                  <%= t 'companyEmailDelivery.updateDelivery'  %>
+                </button>
+              </span>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</template>

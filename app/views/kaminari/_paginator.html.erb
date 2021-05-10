@@ -1,0 +1,15 @@
+<%= paginator.render do -%>
+  <nav class="mt-6 px-4 flex items-center justify-between sm:px-0" role="navigation" aria-label="pager">
+    <%= prev_page_tag %>
+    <div class="hidden md:-mt-px md:flex md:justify-center md:w-8/12">
+    <% each_page do |page| -%>
+      <% if page.display_tag? -%>
+        <%= page_tag page %>
+      <% elsif !page.was_truncated? -%>
+        <%= gap_tag %>
+      <% end -%>
+    <% end -%>
+    </div>
+    <%= next_page_tag %>
+  </nav>
+<% end -%>

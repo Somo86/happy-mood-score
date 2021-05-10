@@ -1,0 +1,15 @@
+<turbo-frame id="high5-admin">
+    <div class="md:flex md:items-center md:justify-between">
+      <div class="flex-1 min-w-0">
+        <h2 class="text-2xl font-bold leading-7 text-purple-900 sm:text-3xl sm:leading-9 sm:truncate">
+          <%= t 'high5New.giveHigh5' %>
+        </h2>
+      </div>
+    </div>
+    <div class="mt-6 p-4 flex">
+      <%= render partial: 'main/high5/search' %>
+      <div class="ml-6 p-4 w-2/3 bg-white">
+        <%= render partial: 'main/high5/add' %>
+      </div>
+    </div>
+</turbo-frame>

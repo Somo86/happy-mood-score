@@ -1,0 +1,170 @@
+      <body yahoo="fix" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+      <table border="0" width="100%" cellpadding="0" cellspacing="0" bgcolor="f5f5f5">
+      <tr><td height="40" style="font-size: 40px; line-height: 40px;">&nbsp;</td></tr>
+      <tr>
+      <td align="center">
+      <table border="0" align="center" width="590" cellpadding="0" cellspacing="0" class="container590">
+      <tr>
+      <td width="295" align="left" style="color: #9098a9; font-size: 13px; font-family: Lato, Calibri, sans-serif; line-height: 24px;" class="hide">
+      <div style=" line-height: 24px;">
+      Hola: <%= @message_data[:user_name] %>
+      </div>
+      </td>
+      <td width="295" align="right" class="hide">
+      <table border="0" align="right" cellpadding="0" cellspacing="0">
+      <tr>
+      <td align="center">
+      <table align="center" border="0" cellpadding="0" cellspacing="0">
+      <tr>
+      <td align="left" style="color: #9098a9; font-size: 13px; font-family: Lato, Calibri, sans-serif; line-height: 22px;" class="align-center">
+      <div style="line-height: 22px;">
+      <a style="color: #9098a9; text-decoration: none;" href="https://www.happymoodscore.com/help/how-to-vote">
+      ¿Necesitas ayuda?
+      </a>
+      </div>
+      </td>
+      </tr>
+      </table>
+      </td>
+      </tr>
+      </table>
+      </td>
+      </tr>
+      </table>
+      </td>
+      </tr>
+      <tr>
+      <td height="25" style="font-size: 25px; line-height: 25px;">&nbsp;</td>
+      </tr>
+      </table>
+      <table border="0" width="100%" cellpadding="0" cellspacing="0" bgcolor="f5f5f5">
+      <tr>
+      <td align="center">
+      <table border="0" align="center" width="590" cellpadding="0" cellspacing="0" bgcolor="ffffff" class="container590" style="border-top: none;">
+      <tr>
+      <td align="center">
+      <table border="0" align="center" width="560" cellpadding="0" cellspacing="0" bgcolor="ffffff" class="container580">
+      <tr><td height="40" style="font-size: 40px; line-height: 40px;">&nbsp;</td></tr>
+      <tr>
+      <td align="center" style="color: #0e0e0e; font-size: 36px; font-family: Montserrat, Calibri, sans-serif; mso-line-height-rule: exactly; line-height: 24px;" class="title_color main-header">
+      <div style="line-height: 24px;">
+      ¿Cómo ha ido tu <%= @message_data[:period_name] %>?
+      </div>
+      </td>
+      </tr>
+      <tr><td height="15" style="font-size: 15px; line-height: 15px;">&nbsp;</td></tr>
+      <tr>
+      <td align="center">
+      <table align="center" width="92" border="0" cellpadding="0" cellspacing="0" bgcolor="000000" style="border-radius: 5px;">
+      <tr><td height="3" style="font-size: 3px; line-height: 3px;"></td></tr>
+      </table>
+      </td>
+      </tr>
+      <tr><td height="20" style="font-size: 20px; line-height: 20px;">&nbsp;</td></tr>
+      <tr>
+      <td align="center" style="color: #42c5f5; font-size: 24px; font-family: Montserrat, Calibri, sans-serif; mso-line-height-rule: exactly; line-height: 24px;" class="title_color main-header">
+      <div style="line-height: 24px;">
+      <a style="color: #42c5f5; font-size: 24px; font-family: Montserrat, Calibri, sans-serif;" href="<%= new_vote_url(@message_data[:vote_id], 'fine') %>">
+      Según lo esperado.
+      </a>
+      </div>
+      </td>
+      </tr>
+      <tr><td height="30" style="font-size: 30px; line-height: 30px;">&nbsp;</td></tr>
+      <tr>
+      <td align="center">
+      <table border="0" width="560" align="center" cellpadding="0" cellspacing="0" class="half-container">
+      <tr>
+      <td>
+      <table border="0" align="left" width="270" cellpadding="0" cellspacing="0">
+      <tr><td height="10" style="font-size: 10px; line-height: 10px;">&nbsp;</td></tr>
+      <tr>
+      <td align="center" style="color: #16c98d; font-size: 20px; font-family: Montserrat, Calibri, sans-serif; line-height: 22px;">
+      <div style="line-height: 24px;">
+      <a style="color: #16c98d; font-size: 20px; font-family: Montserrat, Calibri, sans-serif;" href="<%= new_vote_url(@message_data[:vote_id], 'good') %>">
+      Mejor de lo esperado.
+      </a>
+      </div>
+      </td>
+      </tr>
+      <tr><td height="10" style="font-size: 10px; line-height: 10px;">&nbsp;</td></tr>
+      </table>
+      <table border="0" align="right" width="270" cellpadding="0" cellspacing="0">
+      <tr><td height="10" style="font-size: 10px; line-height: 10px;">&nbsp;</td></tr>
+      <tr>
+      <td align="center" style="color: #f06b62; font-size: 20px; font-family: Montserrat, Calibri, sans-serif; line-height: 22px;">
+      <div style="line-height: 24px;">
+      <a style="color: #f06b62; font-size: 20px; font-family: Montserrat, Calibri, sans-serif;" href="<%= new_vote_url(@message_data[:vote_id], 'bad') %>">
+      Peor de lo esperado.
+      </a>
+      </div>
+      </td>
+      </tr>
+      <tr><td height="10" style="font-size: 10px; line-height: 10px;">&nbsp;</td></tr>
+      </table>
+      </td>
+      </tr>
+      </table>
+      </td>
+      </tr>
+      <tr><td height="50" style="font-size: 50px; line-height: 50px;">&nbsp;</td></tr>
+      </table>
+      </td>
+      </tr>
+      </table>
+      </td>
+      </tr>
+      </table>
+      <table border="0" width="100%" cellpadding="0" cellspacing="0" bgcolor="f5f5f5">
+      <tr><td height="30" style="font-size: 30px; line-height: 30px;">&nbsp;</td></tr>
+      <tr>
+      <td align="center">
+      <table border="0" align="center" width="590" cellpadding="0" cellspacing="0" class="container590 bg_color">
+      <tr>
+      <td align="center">
+      <table border="0" width="450" align="center" cellpadding="0" cellspacing="0" class="container590">
+      <tr>
+      <td align="center" style="color: #9098a9; font-size: 13px; font-family: Lato, Calibri, sans-serif; mso-line-height-rule: exactly; line-height: 23px;" class="title_color">
+      <div style="line-height: 23px;">
+      <%= @message_data[:company_name] %> se preocupa por sus empleados y usa Happy Mood Score para obtener feedback y eso te incluye a ti.
+      </div>
+      </td>
+      </tr>
+      <tr><td height="5" style="font-size: 5px; line-height: 5px;">&nbsp;</td></tr>
+      <tr>
+      <td align="center" style="color: #9098a9; font-size: 13px; font-family: Lato, Calibri, sans-serif;  mso-line-height-rule: exactly; line-height: 23px;" class="title_color">
+      <div style="line-height: 23px;">
+      Si no sabes que hacer con este email o crees que lo has recibido por error, por favor, contacta con: <%= "#{@message_data[:admin_name]} - #{@message_data[:admin_email]}" %>
+      </div>
+      </td>
+      </tr>
+      </table>
+      </td>
+      </tr>
+      <tr class="hide"><td height="40" style="font-size: 40px; line-height: 40px;">&nbsp;</td></tr>
+      <tr><td height="30" style="font-size: 30px; line-height: 30px;">&nbsp;</td></tr>
+      <tr>
+      <td align="center">
+      <table border="0" width="450" align="center" cellpadding="0" cellspacing="0" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;" class="container590">
+      <tr>
+      <td>
+      <table border="0" align="center" cellpadding="0" cellspacing="0" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;" class="container590">
+      <tr>
+      <td style="color: #9098a9; font-size: 13px; font-family: Lato, Calibri, sans-serif; line-height: 22px;">
+      <div style=" line-height: 22px;">
+      © copyright 2021 - <a style="color: #444;" href="https://www.happymoodscore.com?utm_source=${this.messageData.companyId}&utm_medium=email&utm_campaign=poweredBy" title="Team management tool">Happy Mood Score</a>
+      </div>
+      </td>
+      </tr>
+      </table>
+      </td>
+      </tr>
+      </table>
+      </td>
+      </tr>
+      <tr><td height="30" style="font-size: 30px; line-height: 30px;">&nbsp;</td></tr>
+      </table>
+      </td>
+      </tr>
+      </table>
+      </body>

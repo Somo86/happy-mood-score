@@ -1,0 +1,8 @@
+<% if page.current? %>
+  <% class_styles = "text-indigo-600 pt-4 px-4 inline-flex items-center text-sm font-medium" %>
+<% else %>
+  <% class_styles = "text-gray-500 hover:text-gray-700 pt-4 px-4 inline-flex items-center text-sm font-medium" %>
+<% end %>
+<span class="<%= class_styles %>">
+  <%= link_to_unless page.current?, page, url, {remote: remote, rel: page.rel} %>
+</span>

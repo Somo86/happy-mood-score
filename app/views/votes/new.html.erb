@@ -1,0 +1,46 @@
+  <div class="min-h-screen bg-gray-50 flex flex-col justify-center">
+    <div class="mx-auto w-auto">
+      <%= image_tag 'hms-logo-dark.png',  alt: "Happy Mood Score - Happy employees" %>
+    </div>
+
+    <div id="form-comment" class="py-4 flex flex-col sm:flex-row lg:py-12">
+      <div class="bg-gray-50 py-16 px-4 sm:w-1/2">
+        <div class="max-w-lg mx-auto">
+          <h1 class="text-2xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-3xl sm:leading-9">
+            <%=  t 'voteComment.sendFeedback'  %>
+          </h1>
+          <p class="mt-3 text-lg leading-6 text-gray-500">
+            <%=  t 'voteComment.goodFeedback'  %>
+          </p>
+          <p class="mt-3 text-lg leading-6">
+            <a href="https://www.happymoodscore.com/help/how-to-vote" target="_blank" class="inline-flex items-center font-medium text-indigo-600 hover:text-indigo-500 transition ease-in-out duration-150" title="<%=  t 'voteComment.feedbackHelpTitle'  %>"><%=  t 'voteComment.feedbackHelp'  %></a>
+          </p>
+        </div>
+      </div>
+      <div class="bg-white py-16 px-6 sm:w-1/2 sm:mr-4 sm:rounded-md">
+        <div class="max-w-lg mx-auto lg:max-w-none">
+          <%= form_with url: votes_url, method: :post, data: { turbo: false } do %>
+            <input type="hidden" name="uuid" value="<%= @uuid %>" />
+            <div>
+              <label for="message" class="sr-only">
+                <%=  t 'voteComment.sendFeedback'  %>
+              </label>
+              <div class="relative rounded-md shadow-sm">
+                <textarea name="message" autofocus rows="5" class="form-input block w-full py-3 px-4 placeholder-gray-500 transition ease-in-out duration-150"></textarea>
+              </div>
+            </div>
+            <div class="mt-4">
+              <span class="inline-flex rounded-md shadow-sm">
+                <button type="submit"
+                  class="inline-flex justify-center py-3 px-6 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-green-600 hover:bg-green-500 focus:outline-none focus:border-green-700 focus:shadow-outline-green active:bg-green-700 transition duration-150 ease-in-out">
+                  <%=  t 'voteComment.sendFeedback'  %>
+                </button>
+              </span>
+            </div>
+            <% end %>
+        </div>
+      </div>
+    </div>
+    <%= render 'high5' %>
+    <%= render 'idea' %>
+  </div>

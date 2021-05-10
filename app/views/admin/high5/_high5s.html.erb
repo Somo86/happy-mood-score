@@ -1,0 +1,10 @@
+<turbo-frame id="high5-results">
+  <div class="ml-6 p-4 w-2/3 bg-white">
+    <% if !@employee %>
+      <%= render 'no_employee' %>
+    <% else %>
+      <%= render 'results' %>
+      <h2>Results</h2>
+    <% end %>
+  </div>
+</turbo-frame>

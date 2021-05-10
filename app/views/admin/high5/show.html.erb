@@ -1,0 +1,16 @@
+<turbo-frame id="high5-results">
+    <div class="md:flex md:items-center md:justify-between">
+      <div class="flex-1 min-w-0">
+        <h2 class="text-xl font-bold leading-7 text-purple-900 sm:text-2xl sm:leading-9 sm:truncate">
+          <%=  @employee.name %> <%# currentFilter  %>
+        </h2>
+      </div>
+      <div class="mt-4 flex md:mt-0 md:ml-4 items-center">
+        <%= render partial: 'admin/high5/filter_period'  %>
+      </div>
+    </div>
+    <div class="mt-6">
+      <h3 class="mb-6 text-lg leading-6 font-medium text-gray-900">
+      </h3>
+    </div>
+</turbo-frame>

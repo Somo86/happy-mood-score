@@ -1,0 +1,4 @@
+<% order = params[:order].to_s == 'asc' ? 'desc' : 'asc' %>
+<% order_link =  employees_admin_ranking_index_url(order: order) %>
+<%= render 'header', title: t('dashboardPeople.employeesRank'), order_link: order_link, order_title: @table_header[:order_link]  %>
+<%= render 'table' %>

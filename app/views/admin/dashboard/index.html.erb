@@ -1,0 +1,6 @@
+<%= render 'header' %>
+<% if @any_votes %>
+  <%= render 'content' %>
+<% else %>
+  <%= render 'admin/feedback/empty' %>
+<% end %>

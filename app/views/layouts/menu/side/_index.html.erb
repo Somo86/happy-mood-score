@@ -1,0 +1,5 @@
+<% if current_user.admin? && route_includes_admin_path %>
+  <%= render partial: 'layouts/menu/side/manager' %>
+<% else %>
+  <%= render partial: 'layouts/menu/side/user' %>
+<% end %>

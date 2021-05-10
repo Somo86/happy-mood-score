@@ -1,13 +1,58 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:v="urn:schemas-microsoft-com:vml" lang="<%= I18n.locale %>">
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <style>
-      /* Email styles need to be inline */
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;" />
+    <meta name="viewport" content="width=600,initial-scale = 2.3,user-scalable=no">
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,500,300,600,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700" rel="stylesheet" type="text/css">
+    <title><%= @subject %></title>
+    <style type="text/css">
+body{
+  width: 100%;
+  background-color: #f3f4f4;
+  margin:0;
+  padding:0;
+  -webkit-font-smoothing: antialiased;
+  mso-margin-top-alt:0px; mso-margin-bottom-alt:0px; mso-padding-alt: 0px 0px 0px 0px;
+}
+      p,h1,h2,h3,h4{
+        margin-top:0;
+        margin-bottom:0;
+        padding-top:0;
+        padding-bottom:0;
+      }
+      span.preheader{display: none; font-size: 1px;}
+      html{
+        width: 100%;
+      }
+      table{
+        font-size: 14px;
+        border: 0;
+      }
+      media only screen and (max-width: 640px){
+        body[yahoo] .main-header{font-size: 22px !important;}
+        body[yahoo] .main-section-header{font-size: 28px !important;}
+        body[yahoo] .show{display: block !important;}
+        body[yahoo] .hide{display: none !important;}
+        body[yahoo] .align-center{text-align: center !important;}
+        body[yahoo] .responsive-td{display: block !important;}
+        body[yahoo] .feature-bg{background-image: none !important;}
+        body[yahoo] .container590{width: 440px !important;}
+        body[yahoo] .container580{width: 400px !important;}
+        body[yahoo] .half-container{width: 220px !important;}
+        body[yahoo] .main-button{width: 220px !important;}
+        body[yahoo] .section-img img{width: 320px !important; height: auto !important;}
+      }
+      media only screen and (max-width: 479px){
+        body[yahoo] .main-header{font-size: 20px !important;}
+        body[yahoo] .main-section-header{font-size: 24px !important;}
+        body[yahoo] .container590{width: 280px !important;}
+        body[yahoo] .container580{width: 260px !important;}
+        body[yahoo] .half-container{width: 130px !important;}
+        body[yahoo] .section-img img{width: 280px !important; height: auto !important;}
+      }
     </style>
   </head>
-
-  <body>
-    <%= yield %>
-  </body>
+  <%= yield %>
 </html>

@@ -1,0 +1,62 @@
+<turbo-frame id="admin-employees">
+  <div class="md:flex md:items-center md:justify-between">
+    <div class="flex-1 min-w-0">
+      <h2 class="text-2xl font-bold leading-7 text-orange-900 sm:text-3xl sm:leading-9 sm:truncate">
+        <%= t 'addEmployee.employees'  %>
+      </h2>
+    </div>
+    <div class="flex md:mt-0 md:ml-4 items-center">
+      <div class="mr-4">
+        <span class="rounded-md shadow-sm">
+          <%= link_to new_admin_upload_url, title: t('addEmployee.importCsv' ), class: "inline-flex items-center px-4 py-2 border border-gray-300 text-sm leading-4 font-medium rounded-md text-gray-700 bg-white hover:text-gray-500 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:text-gray-800 active:bg-gray-50 transition ease-in-out duration-150", data: { turbo: false } do %>
+            <svg class="-ml-1 mr-2 h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+              <path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM6.293 6.707a1 1 0 010-1.414l3-3a1 1 0 011.414 0l3 3a1 1 0 01-1.414 1.414L11 5.414V13a1 1 0 11-2 0V5.414L7.707 6.707a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+            </svg>
+            <%= t 'addEmployee.uploadCsv'  %>
+          <% end %>
+        </span>
+      </div>
+      <div class="mr-4">
+        <% if @show_archived %>
+          <span class="rounded-md shadow-sm">
+            <%= link_to admin_employees_url(archived: 1), class: "add-campaign inline-flex items-center px-4 py-2 border border-transparent text-sm leading-5 font-medium rounded-md text-white bg-orange-600 hover:bg-orange-500 focus:outline-none focus:border-orange-700 focus:shadow-outline-orange active:bg-orange-700 transition ease-in-out duration-150" do %>
+              <svg class="-ml-1 mr-2 h-5 w-5" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" stroke="currentColor" viewBox="0 0 24 24">
+                <path d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4" />
+              </svg>
+              <%= t 'addEmployee.archivedEmployees'  %>
+            <% end %>
+          </span>
+        <% else %>
+          <span class="rounded-md shadow-sm">
+            <%= link_to admin_employees_url, class:"add-campaign inline-flex items-center px-4 py-2 border border-transparent text-sm leading-5 font-medium rounded-md text-white bg-yellow-600 hover:bg-yellow-500 focus:outline-none focus:border-yellow-700 focus:shadow-outline-orange active:bg-yellow-700 transition ease-in-out duration-150" do %>
+              <svg class="-ml-1 mr-2 h-5 w-5" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" stroke="currentColor" viewBox="0 0 24 24">
+                <path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+              </svg>
+              <%= t 'addEmployee.activeEmployees'  %>
+            <% end %>
+          </span>
+        <% end %>
+      </div>
+      <div class="mr-4">
+        <span class="rounded-md shadow-sm">
+          <%= link_to new_admin_employee_url, class: "inline-flex items-center px-4 py-2 border border-transparent text-sm leading-5 font-medium rounded-md text-white bg-blue-600 hover:bg-blue-500 focus:outline-none focus:border-blue-700 focus:shadow-outline-blue active:bg-blue-700 transition ease-in-out duration-150" do %>
+            <svg class="-ml-1 mr-2 h-5 w-5" fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" stroke="currentColor" viewBox="0 0 24 24">
+              <path d="M12 4v16m8-8H4"></path>
+            </svg>
+            <%= t 'addEmployee.addNewEmployee'  %>
+          <% end %>
+        </span>
+      </div>
+    </div>
+  </div>
+  <%=  render 'search'  %>
+  <div class="mt-6 bg-white px-4 py-5 border border-gray-200 rounded-md sm:px-6">
+    <ul id="employees-list">
+      <turbo-stream action="update" target="employees-list">
+        <template>
+          <%= render @employees %>
+        </template>
+      </turbo-stream>
+    </ul>
+  </div>
+</turbo-frame>

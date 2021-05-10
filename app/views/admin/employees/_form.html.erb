@@ -1,0 +1,47 @@
+<%= tw_form_with model: [:admin, @employee], class: "px-10 py-4" do |form| %>
+  <%= form.text_input :name, autofocus: true %>
+  <%= form.email_input :email %>
+  <div>
+    <label for="employee[team_id]" class="block text-sm font-medium text-gray-700">
+      <%= t 'addEmployee.selectTeam' %>
+    </label>
+    <%= form.collection_select_input :team_id, Team.order(:name), :id, :name %>
+  </div>
+  <div class="mt-4">
+  <%= form.email_input :slack_username %>
+  </div>
+  <div>
+    <label for="employee[language_ud]" class="block text-sm font-medium text-gray-700">
+      <%= t 'addEmployee.selectLanguage' %>
+    </label>
+    <%= form.collection_select_input :language_id, Language.all, :id, :name %>
+  </div>
+  <div class="mt-6 sm:mt-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:items-center sm:border-t sm:border-gray-200 sm:pt-5">
+    <label for="avatar" class="block text-sm leading-5 font-medium text-gray-700">
+      <%=  t 'addEmployee.avatarId'  %>
+    </label>
+    <div class="mt-2 sm:mt-0 sm:col-span-2">
+      <div class="flex items-center">
+        <span class="h-12 w-12 rounded-full overflow-hidden bg-gray-100">
+          <%= employee_avatar(@employee) %>
+        </span>
+        <span class="ml-5 rounded-md shadow-sm">
+          <%= form.file_field :avatar %>
+        </span>
+      </div>
+    </div>
+  </div>
+  <div class="mt-8 border-t border-gray-200 pt-5">
+    <div class="flex justify-end">
+      <span class="ml-3 inline-flex rounded-md shadow-sm">
+        <button type="submit" id="submit-form" class="inline-flex justify-center py-2 px-4 border border-transparent text-sm leading-5 font-medium rounded-md text-white bg-green-600 hover:bg-green-500 focus:outline-none focus:border-green-700 focus:shadow-outline-green active:bg-green-700 transition duration-150 ease-in-out">
+          <% if @employee.id.present? %>
+            <%= t 'employeesEdit.editEmployee'  %>
+          <% else %>
+            <%= t 'addEmployee.addEmployee'  %>
+          <% end %>
+        </button>
+      </span>
+    </div>
+  </div>
+<% end %>

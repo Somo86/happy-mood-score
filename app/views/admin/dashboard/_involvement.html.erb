@@ -1,0 +1,9 @@
+<div class="mt-6">
+  <h3 class="text-lg leading-6 font-medium text-gray-900">
+    <%=  t 'leftDashboard.involvementTitle'  %>
+  </h3>
+  <div class="mt-6 grid grid-cols-1 gap-5 md:grid-cols-2">
+    <%= render 'shared/dashboard/trends/all', title: t('userTrends.high5Total'), view_all_link: admin_high5_index_url, total: @dashboard[:total_high5], total_period: @dashboard[:weekly_high5], total_period_text: t('userTrends.high5TotalWeek') %>
+    <%= render 'shared/dashboard/trends/all', title: t('userTrends.commentsTotal'), view_all_link: admin_feedback_index_url, total: @dashboard[:total_comments], total_period: @dashboard[:weekly_comments], total_period_text: t('userTrends.commentsWeek') %>
+  </div>
+</div>

@@ -1,0 +1,25 @@
+  <div class="mt-6 mx-8 bg-white shadow rounded-sm sm:rounded-lg md:mx-24 lg:mx-36">
+    <div class="px-4 py-5 sm:p-6">
+      <h3 class="text-lg leading-6 font-medium text-gray-900">
+        <%=  t 'voteComment.rewards'  %>
+      </h3>
+      <div class="mt-2 sm:flex sm:items-start sm:justify-between">
+        <div class="max-w-xl text-sm leading-5 text-gray-500">
+          <p>
+            <%=  t 'voteComment.giveReward'  %>.
+          </p>
+          <p><%=  t 'voteComment.high5Explanation'  %></p>
+        </div>
+        <div class="mt-6 sm:mt-0 sm:ml-6 sm:flex-shrink-0 sm:flex sm:items-center">
+          <span class="inline-flex rounded-md shadow-sm">
+            <%= link_to login_url, class: "inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-indigo-700 bg-indigo-100 hover:bg-indigo-50 focus:outline-none focus:border-indigo-300 focus:shadow-outline-indigo active:bg-indigo-200 transition ease-in-out duration-150" do %>
+              <svg fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor" class="mr-3 h-6 w-6">
+                <path d="M7 11.5V14m0-2.5v-6a1.5 1.5 0 113 0m-3 6a1.5 1.5 0 00-3 0v2a7.5 7.5 0 0015 0v-5a1.5 1.5 0 00-3 0m-6-3V11m0-5.5v-1a1.5 1.5 0 013 0v1m0 0V11m0-5.5a1.5 1.5 0 013 0v3m0 0V11"> </path>
+              </svg>
+              <%=  t 'voteComment.giveHigh5'  %>
+              <% end %>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>

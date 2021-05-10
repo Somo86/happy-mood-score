@@ -1,0 +1,51 @@
+<turbo-frame id="company-schedule">
+  <% if @company.next_request_at.present? %>
+    <div class="mt-6 bg-white shadow sm:rounded-lg">
+      <div class="px-4 py-5 sm:p-6">
+        <h3 class="text-lg leading-6 font-medium text-gray-900">
+          <%= t 'companyEmailDelivery.nextDelivery' %> <%= time_with_timezone(@company.next_request_at, @company) %>
+        </h3>
+        <div class="mt-2 sm:flex sm:items-start sm:justify-between">
+          <div class="max-w-xl text-sm leading-5 text-gray-500">
+            <p>
+            <%= t 'companyEmailDelivery.deliveryInfo'  %>
+            </p>
+          </div>
+          <div class="mt-6 sm:mt-0 sm:ml-6 sm:flex-shrink-0 sm:flex sm:items-center">
+            <%= form_with url: admin_job_url(@company), method: :delete do %>
+              <span class="inline-flex rounded-md shadow-sm">
+                <button type="submit" id="remove-schedule" class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-pink-700 bg-pink-100 hover:bg-pink-50 focus:outline-none focus:border-pink-300 focus:shadow-outline-pink active:bg-pink-200 transition ease-in-out duration-150">
+                  <%= t 'companyEmailDelivery.cancelDelivery'  %>
+                </button>
+              </span>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  <% else %>
+    <div class="mt-6 bg-white shadow sm:rounded-lg">
+      <div class="px-4 py-5 sm:p-6">
+        <h3 class="text-lg leading-6 font-medium text-gray-900">
+          <%= t 'companyEmailDelivery.noDelivery'  %>
+        </h3>
+        <div class="mt-2 sm:flex sm:items-start sm:justify-between">
+          <div class="max-w-xl text-sm leading-5 text-gray-500">
+            <p>
+            <%= t 'companyEmailDelivery.deliveryInfo'  %>
+            </p>
+          </div>
+          <div class="mt-6 sm:mt-0 sm:ml-6 sm:flex-shrink-0 sm:flex sm:items-center">
+            <%= form_with url: admin_jobs_url, method: :post do %>
+              <span class="inline-flex rounded-md shadow-sm">
+                <button type="submit" class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-teal-700 bg-teal-100 hover:bg-teal-50 focus:outline-none focus:border-teal-300 focus:shadow-outline-teal active:bg-teal-200 transition ease-in-out duration-150">
+                  <%= t 'companyEmailDelivery.scheduleEmail'  %>
+                </button>
+              </span>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</turbo-frame>

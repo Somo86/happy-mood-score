@@ -1,0 +1,29 @@
+<li id="<%= dom_id note %>" class="pb-1 rounded border-b border-gray-100 <%= note.done ? 'bg-pink-50' : nil %>">
+  <turbo-stream action="update" target="<%= dom_id note %>">
+    <template>
+      <div class="flex space-x-3">
+        <div class="w-full py-2 px-2">
+          <div class="mt-1 w-full text-sm space-x-2 flex justify-between items-center">
+            <p class="text-gray-500 text-sm">
+            <%=  time_ago_in_words note.created_at  %>
+            </p>
+            <div>
+              <% if !note.done %>
+                <div class="inline-flex px-2.5 py-0.5">
+                  <%= form_with model: [:main, note] do %>
+                    <button type="submit" class="px-2.5 py-0.5 items-center border border-transparent text-xs font-medium rounded-full text-yellow-700 bg-yellow-100 hover:bg-yellow-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-500">
+                      <%=  t 'todosList.close'  %>
+                    </button>
+                  <% end %>
+                </div>
+              <% end %>
+            </div>
+          </div>
+          <div class="mt-1 text-sm text-gray-700">
+            <p><%= note.description  %></p>
+          </div>
+        </div>
+      </div>
+    </template>
+  </turbo-stream>
+</li>

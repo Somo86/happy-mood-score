@@ -1,0 +1,10 @@
+<div class="mt-6">
+  <%= render layout: 'shared/alert_info', locals: { title: t('feedbackList.noVotesRegistered'), message: t('feedbackList.feedbackDescription') } do %>
+    <div class="mt-4">
+      <div class="-mx-2 -my-1.5 flex">
+        <%= link_to t('feedbackList.enableFeedback'), admin_company_deliveries_url(current_user.company), class: "px-2 py-1.5 rounded-md text-sm leading-5 font-medium text-blue-800 hover:bg-blue-100 focus:outline-none focus:bg-blue-100 transition ease-in-out duration-150" %>
+        <%= link_to t('feedbackList.addEmployees'), admin_employees_url, class: "ml-3 px-2 py-1.5 rounded-md text-sm leading-5 font-medium text-blue-800 hover:bg-blue-100 focus:outline-none focus:bg-blue-100 transition ease-in-out duration-150" %>
+      </div>
+    </div>
+  <% end %>
+</div>

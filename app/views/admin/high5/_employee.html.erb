@@ -1,0 +1,10 @@
+<li class="py-3">
+  <%= link_to admin_high5_url(employee), data: { "turbo-frame": "high5-results" } do %>
+    <div class="flex items-center">
+      <%= employee_avatar(employee, 'sm') %>
+      <p class="ml-4 font-medium text-gray-900">
+      <%= employee.name %>
+      </p>
+    </div>
+  <% end %>
+</li>

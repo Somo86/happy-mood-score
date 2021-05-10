@@ -1,0 +1,26 @@
+<li id="<%= dom_id feedback %>" class="px-4 border-b border-gray-300 pb-4">
+  <div class="px-4 flex space-x-3">
+    <div class="flex-shrink-0">
+      <%= employee_avatar(feedback.employee) %>
+    </div>
+    <div>
+      <p class="text-sm">
+      <a href="#" class="font-medium text-gray-900">
+        <%= feedback.employee.name %>
+      </a>
+      <%= feedback_result(feedback.result) %>
+      </p>
+      <p class="mt-1 text-sm text-gray-700">
+      <%=  feedback.description %>
+      </p>
+      <div class="flex">
+        <%= render partial: 'admin/feedback/reply', collection: feedback.replies %>
+      </div>
+      <div class="mt-2 text-sm space-x-2">
+        <span class="text-gray-500 font-medium">
+          <%= l feedback.created_at, format: :short %>
+        </span>
+      </div>
+    </div>
+  </div>
+</li>

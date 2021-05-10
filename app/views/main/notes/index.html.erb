@@ -1,0 +1,37 @@
+<div class="py-6">
+  <div class="max-w-3xl mx-auto px-4 sm:px-6 md:flex md:items-center md:justify-between md:space-x-5 lg:max-w-7xl lg:px-8">
+    <div class="flex items-center space-x-5">
+      <div>
+        <h1 class="text-2xl font-bold text-purple-900"><%= t 'todosList.header' %></h1>
+      </div>
+    </div>
+    <div class="mt-6 flex flex-col-reverse justify-stretch items-center space-y-4 space-y-reverse sm:flex-row-reverse sm:justify-end sm:space-x-reverse sm:space-y-0 sm:space-x-3 md:mt-0 md:flex-row md:space-x-3">
+
+      <%= render 'main/notes/filter_status', closed: params[:closed].to_i == 1 %>
+    </div>
+  </div>
+  <div class="mt-8 px-6 w-full">
+    <div class="space-y-6 lg:mr-6">
+      <section aria-labelledby="notes-title">
+        <div class="bg-white shadow sm:rounded-lg sm:overflow-hidden">
+          <div class="divide-y divide-gray-200">
+            <% if params[:closed].to_i != 1 %>
+              <div class="bg-gray-50 px-4 py-6 sm:px-6">
+                <%= render 'form'  %>
+              </div>
+            <% end %>
+            <div class="px-4 py-6 sm:px-6">
+              <ul id="notes" class="space-y-4">
+                <turbo-stream action="prepend" target="notes">
+                  <template>
+                  </template>
+                </turbo-stream>
+                <%= render partial: 'main/notes/note', collection: @notes  %>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+</div>

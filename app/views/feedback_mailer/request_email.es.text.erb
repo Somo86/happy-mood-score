@@ -1,0 +1,17 @@
+Hola <%= @message_data[:user_name] %>:
+
+¿Cómo ha ido tu <%= @message_data[:period_name] %>?
+
+Según lo esperado. <%= new_vote_url(@message_data[:vote_id], 'fine') %>
+
+Mejor de lo esperado. <%= new_vote_url(@message_data[:vote_id], 'good') %>
+
+Peor de lo esperado. <%= new_vote_url(@message_data[:vote_id], 'bad') %>
+
+Después de seleccionar una opción puedes añadir un comentario explicando porqué ha ido así tu <%= @message_data[:period_name] %>. Es conveniente incluir en el comentario logros, tareas pendientes, próximos pasos o cualquier otra información que consideres relevante. Únicamente tu manager puede leer estos comentarios.
+
+<%= @message_data[:company_name] %> se preocupa por sus empleados y usa Happy Mood Score para obtener feedback y eso te incluye a ti.
+
+Si no sabes que hacer con este email o crees que lo has recibido por error, por favor, contacta con: <%= "#{@message_data[:admin_name]} - #{@message_data[:admin_email]}" %>
+
+https://www.happymoodscore.com

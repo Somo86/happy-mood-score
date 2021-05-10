@@ -1,0 +1,15 @@
+<div class="ml-2 flex items-baseline text-sm leading-5 font-semibold">
+  <% if total_period.positive?  %>
+    <svg class="self-center flex-shrink-0 h-5 w-5 text-green-500" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewBox="0 0 28 28" stroke="currentColor">
+      <path d="M5 10l7-7m0 0l7 7m-7-7v18" />
+    </svg>
+    <span class="text-green-600"> <%= total_period %> <%= total_period_text  %></span>
+  <% elsif total_period.negative? %>
+    <svg class="self-center flex-shrink-0 h-5 w-5 text-red-500" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewBox="0 0 28 28" stroke="currentColor">
+      <path fill-rule="evenodd" d="M19 14l-7 7m0 0l-7-7m7 7V3" clip-rule="evenodd" />
+    </svg>
+    <span class="text-red-600"> <%= total_period %> <%= total_period_text %></span>
+  <% else %>
+    <span class="text-indigo-600"> <%= total_period %> <%= total_period_text %></span>
+  <% end %>
+</div>

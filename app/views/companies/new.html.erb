@@ -1,0 +1,60 @@
+<div class="min-h-screen bg-white flex">
+  <div class="flex-1 flex flex-col justify-center py-12 px-4 sm:px-6 lg:flex-none lg:px-20 xl:px-24">
+    <div class="mx-auto w-full max-w-sm">
+      <div>
+        <a href="https://www.happymoodscore.com" title="Easiest way to give feedback with Happy Mood Score" data-turbo="false">
+          <%= image_tag 'hms-logo-dark.png', class: 'h-20 w-auto', alt: 'Happy Mood Score' %>
+        </a>
+        <h1 class="mt-6 text-2xl leading-9 font-extrabold text-gray-900">
+          <%= t('signup.toolsYouNeed') %>
+        </h1>
+      </div>
+
+      <turbo-frame id="new_company">
+        <div class="mt-8">
+          <div class="mt-6">
+            <%= tw_form_with model: @company do |company_form| %>
+              <%= company_form.text_input :name, autofocus: true do %>
+                <svg class="h-5 w-5 text-gray-400" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" stroke="currentColor" viewBox="0 0 24 24">
+                  <path d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"> </path>
+                </svg>
+              <% end %>
+
+              <%= company_form.email_input :email do %>
+                <svg class="h-5 w-5 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884zM18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" clip-rule="evenodd" />
+                </svg>
+              <% end %>
+
+              <div>
+                <label for="company[language_id]" class="block text-sm font-medium text-gray-700">
+                  <%= t 'signup.language' %>
+          </label>
+                <%= company_form.collection_select_input :language_id, Language.all, :id, :name %>
+              </div>
+              <div class="mt-6">
+                <span class="block w-full rounded-md shadow-sm">
+                  <button type="submit"
+                    class="w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo active:bg-indigo-700 transition duration-150 ease-in-out">
+                    <%= t('signup.createAccount') %>
+                  </button>
+                </span>
+              </div>
+            <% end %>
+          </div>
+          <div class="mt-6">
+            <div class="text-md text-center leading-5">
+              <%= t('signup.haveAnAccount') %>
+              <a href="/login" class="font-medium text-indigo-600 hover:text-indigo-500 focus:outline-none focus:underline transition ease-in-out duration-150" data-turbo="false">
+                <%= t('signup.logIn') %>
+              </a>
+            </div>
+          </div>
+        </div>
+      </turbo-frame>
+    </div>
+  </div>
+  <div class="hidden lg:block relative w-0 flex-1">
+    <%= image_tag 'frontend/free-sign-up.jpg', class: "absolute inset-0 h-full w-full object-cover", alt: "Feedback that matters. Happy Mood Score" %>
+  </div>
+</div>
