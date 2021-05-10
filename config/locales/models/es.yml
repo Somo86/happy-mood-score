@@ -1,0 +1,17 @@
+es:
+  activerecord:
+    models:
+      user: 'Usuario'
+      event: 'Evento'
+      reward: 'Recompensa'
+      team: 'Equipo'
+      company: 'Empresa'
+      employee: 'Empleado'
+      vote: 'Voto'
+      idea: 'Idea'
+    attributes:
+      user:
+        name: 'Nombre'
+        email: 'E-mail'
+        password: 'Contraseña'
+        password_confirmation: 'Confirmación de la contraseña'

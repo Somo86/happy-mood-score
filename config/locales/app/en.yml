@@ -1,0 +1,998 @@
+en:
+  counter: 'Count'
+  points: 'Total points'
+  gt: 'Greater than'
+  gte: 'Greater than or equal to'
+  eq: 'Equal to'
+  lt: 'Lower than'
+  lte: 'Lower than or equal to'
+  hello: 'Hello'
+  of: 'of'
+
+  employeesTable:
+    name: 'Name'
+    email: 'Email'
+    team: 'Team'
+    teamId: 'Team Id'
+    slackUsername: 'Slack username'
+    actions: 'Actions'
+    permissions: 'Permissions'
+    avatarId: 'Avatar'
+
+  activityList:
+    allEmployees: 'All employees'
+    filterOptions: 'Filter options'
+    lastWeek: 'Last week'
+    lastMonth: 'Last month'
+    lastQuarter: 'Last quarter'
+    lastYear: 'Last year'
+    viewAll: 'View all'
+    activity: 'Activity'
+    date: 'Date'
+    action: 'Action'
+    loadMore: 'Load more activities'
+    lastWeekFilter: 'Last week activities'
+    lastMonthFilter: 'Last month activities'
+    lastQuarterFilter: 'Last quarter activities'
+    lastYearFilter: 'Last year activities'
+    allFilter: 'All activities'
+
+  chatItem:
+    admin: 'Admin:'
+    comments: 'Comments:'
+    lastActivity: 'Last activity:'
+
+  chatsList:
+    startNewChat: 'Start a new chat'
+    chat: 'Chat'
+    noChats: 'There are no chats yet.'
+    cancel: 'Cancel'
+    start: 'Start'
+    chatCreated: 'Chat created successfully.'
+
+  chatShow:
+    toNavigate: 'to navigate'
+    toSelect: 'to select'
+    dismiss: 'esc to dismiss'
+    close: 'close'
+    bold: 'Bold'
+    italic: 'Italic'
+    header: 'Header'
+    strike: 'Strike'
+    code: 'Code'
+    quote: 'Quote'
+    syntaxHelp: 'Format syntax'
+    syntaxOptions: 'Check all formating options'
+    onlineUsers: 'Online users'
+
+  cancelSubscription:
+    cancelSubscription: 'Cancel subscription'
+    warning: 'If you cancel your subscription it will remain active until the end of the current billing period but'
+    notRenewed: 'it will not be renewed.'
+    areYouSure: 'Are you sure?'
+    notSure: "No, I don't want to cancel the subscription"
+    imSure: 'Yes, cancel the subscription'
+    cancelled: 'Your subscription has been cancelled successfully'
+
+  reactivateSubscription:
+    reactivate: 'Reactivate subscription'
+    warning: 'If you reactivate the subscription you will be charged after the end of the current period.'
+    areYouSure: 'Are you sure?'
+    notSure: "No, I don't want to reactivate the subscription"
+    imSure: 'Yes, reactivate the subscription'
+    reactivated: 'Your subscription has been reactivated successfully.'
+
+  companySubscription:
+    cancelAtEnd: 'Cancel at end of billing cycle'
+
+  companySubscriptions:
+    billing: 'Billing'
+    activeEmployees: "There are <strong>%s active employees</strong>"
+    basicPlan: "<strong>%s employees</strong> are already included in your %s plan"
+    extraPlan: "<strong>%s employees</strong> will be invoiced at $1/month each."
+    name: 'Name'
+    status: 'Status'
+    employees: 'Employees'
+    billingInterval: 'Billing interval'
+    nextDate: 'Next billing date'
+    subscriptionUpdated: 'Number of active employees updated successfully.'
+
+  companyShow:
+    editCompany: 'Settings'
+    editDelivery: 'Feedback request frequency'
+    editSlack: 'Integrate HMS with Slack'
+    deleteCompany: 'Delete this account'
+    editCompanyAction: 'Settings'
+    editDeliveryAction: 'Feedback request'
+    editSlackAction: 'Slack integration'
+    deleteCompanyAction: 'Delete account'
+    editCompanyInfo: 'Change the company information like name, address, city. You can also set the default language, the date format and the timezone.'
+    editDeliveryInfo: 'Update the frequency and/or the time when feedback request will be send to the employees.'
+    editSlackInfo: 'Integrate Slack with HMS. Your employees will be able to provide feedback, give high 5s or create 1 on1 items via Slack.'
+    deleteCompanyInfo: "Delete your account and all of its data. This process is irreversible."
+    backToShow: 'Back to company info'
+
+  creditCard:
+    paymentDetails: 'Payment details'
+    updateCreditCard: "You can update your credit card details at anytime but you won't be charged until the next billing date."
+    doNotCollect: 'We do not collect or store your credit card info. We use'
+    changeCreditCard: 'Change credit card'
+    addCreditCard: "You can enter your credit card details anytime but you won't be charged until the trial period expires."
+    stripe: 'stripe'
+    bestProvider: 'the best and more secure online payments provider.'
+    addPayment: 'Add payment info'
+    activateSubscription: 'Activate subscription'
+    activeEmployees: ' active employees.'
+
+  companyDeleteAccount:
+    deleteAccount: 'Delete account'
+    sadNews: "We'll miss you if you decide to cancel your account. If there is something we can do for you please"
+    contactUs: 'Contact Us'
+    deleteWord: "To delete your account write the word DELETE and press the 'Delete my account' button."
+    undone: 'This process can NOT be undone'
+    deleteMyAccount: 'Delete my account!'
+    thankYou: 'Thanks for using Happy Mood Score'
+    confirmationText: 'As this process can not be undone. We require that you write the word DELETE and then press the delete button. This process will help us prevent accidental account deletions and loss of data.'
+
+  companyEmailDelivery:
+    emptyTitle: 'There are no employees yet'
+    scheduleEmail: 'Schedule delivery'
+    scheduleSuccess: 'A new periodic delivery has been scheduled.'
+    scheduleCancel: 'The periodic delivery has been cancelled.'
+    alreadyActive: 'There is an active delivery already scheduled. Cancel it first to create a new one.'
+    updateDelivery: 'Update delivery frequency'
+    nextDelivery: "The next delivery is scheduled for: "
+    cancelDelivery: 'Cancel delivery'
+    noDelivery: 'There is no email delivery scheduled.'
+    generateDelivery: 'Generate new schedule'
+    deliveryInfo: "We'll send an email to the active employes requesting their feedback. If you have Slack enabled, the request will be send to Slack instead of by email."
+    testEmailTitle: 'Receive a copy of the feedback request email'
+    checkEmail: 'Do you want to see the email your employees will receive?'
+    testEmail: 'Test email'
+    testEmailSent: 'A test email was delivered to your email address.'
+    beforeScheduling: 'Before scheduling the email delivery you need to'
+    addEmployees: 'add employees'
+    first: 'first.'
+    daily: 'Daily (Mon-Fri)'
+    weekly: 'Weekly'
+    monthly: 'Monthly'
+    monday: 'Monday'
+    tuesday: 'Tuesday'
+    wednesday: 'Wednesday'
+    thursday: 'Thursday'
+    friday: 'Friday'
+
+  companyDeliveryForm:
+    deliveryTitle: 'Select how frequently you want to receive feedback'
+    deliveryInfo: 'You can select daily, weekly and monthly. Weekly seems the most popular option and the one that gets the best response rates.'
+
+  companySlackIntegration:
+    addSlackEmployees: 'There are no employees with a Slack username.'
+    editEmployees: 'Edit employees'
+    totalSlackEmployees: 'There are %s employees with a Slack username.'
+    addSlack: 'Please press the "Add to Slack" button to authorise us to send messages to your Slack team. You will need a Slack user with admin permission.'
+    slackHelp: 'Slack help about roles and permissions'
+    process: 'Authorise HMS to send and receive messages from Slack'
+    howTo1: "Once this is done your employees will be able to send feedback and High 5s messages. The periodic feedback request will be made using Slack instead of the email."
+    header: 'Slack integration'
+    activeToken: 'Slack integration is currently active.'
+    activeTokenInfo: "If you cancel your Slack integration your employees won't be able to send feedback or high 5s using Slack. Those employees that received the feedback request via Slack will receive it via email after the cancellation."
+    removeToken: 'Cancel integration'
+    tokenRemoved: 'Slack integration was cancelled successfully.'
+
+  companySettings:
+    settings: 'Company settings'
+    update: 'Update settings'
+    title: 'Update your company settings'
+    settingsInfo: 'When you update the language all the web texts and email messages will be displayed in the selected language.  You can also the choose the date format and the timezone.'
+
+  contact:
+    contactUs: 'Contact Us'
+    title: 'We are always happy to help'
+    happyToHelp: "Do you have a suggestion for improvement, a new idea? Do you need help with some process, anything not clear? We'll do our best to help you."
+    yourMessage: 'Message:'
+    sendMessage: 'Send message'
+    messageReceived: 'We have received your message. Thanks for using Happy Mood Score.'
+    requiredFields: 'Please add all required fields so we can help you. Thank you.'
+
+  badgesAndPrizes:
+    noBadges: "You've earned no badges or prizes yet."
+    prizeHelp: 'Add feedback or give a High 5 to a co-worker. By doing all of those activities you will earn points, badges and improve your level.'
+
+  dashboard:
+    noVotes: 'No feedback yet!'
+    noVotesRegistered: 'There is no feedback registered yet and your dashboard is empty.'
+
+  dashboardHeaderAdmin:
+    viewStats: 'View stats'
+    dashboard: "%s dashboard"
+    dashboardHeader: 'Dashboard'
+
+  dashboardHeaderEmployees:
+    giveHigh5: 'Give a High 5'
+    high5Help: 'A High 5 is a recognition you give to a colleague for being helpful, good co-worker, nice team player...'
+    joinConversation: 'Join the conversation!'
+    chatHelp: 'Start a conversation on any topic.'
+    dashboard: 'Dashboard'
+    ranking: 'Ranking'
+
+  leftDashboard:
+    badges: 'Badges & Prizes'
+    distribution: 'Vote distribution'
+    involvement: '% Involvement'
+    happy: 'Better than expected'
+    fine: 'As expected'
+    bad: 'Worse than expected'
+    total: 'Total'
+    votes: 'Votes'
+    involvementTitle: 'Involvement'
+
+  dashboardOnboardAdmin:
+    welcome: 'Welcome to Happy Mood Score'
+    bye: "You've been logged out successfully."
+    twoSteps: "Let's start using HMS in just two easy steps."
+    addEmployeesInfo: '1.- Add your employees info'
+    addEmployees: 'Add employees'
+    addTitle: 'Add employees'
+    addPivotal: 'Import from Pivotal Tracker'
+    addCsv: 'Import from CSV'
+    pivotalTitle: 'Import employees from your Pivotal Tracker projects.'
+    csvTitle: 'Import employees from a comma separated file.'
+    employeesText: 'Add the name and email of your employees or import them from Pivotal Tracker or uploading a csv file.'
+    confirmationEmail: 'When you add employees we will send them a confirmation email with a link to activate their accounts and add a password. '
+    pleaseInform: 'Please inform them about this email'
+    scheduleEmail: '2.- Schedule delivery'
+    companySettings: 'Company settings'
+    scheduleSelect: 'Select how frequently you want request feedback employees (daily / weekly / monthly).'
+    scheduleFrequency: 'Based on the frequency you select we will send an email to your employees asking them how was their "day/week/month".'
+    informEmployees: "Don't forget to inform your employees about the email they will start to receive."
+    scheduleDelivery: 'Schedule delivery'
+    questions: 'Questions, doubts, comments? Visit the'
+    helpSection: 'help section'
+    sendEmail: 'or send us an email to: info@happymoodscore.com. We are always happy to help.'
+    close: 'Close'
+
+  rightDashboard:
+    mostRecent: 'Most recent feedback'
+    viewAll: 'View all'
+
+  hmsTrends:
+    dashboard: 'dashboard'
+    trends: 'trends'
+    monthlyTrends: 'Trends'
+    noFeedback: 'No feedback yet!'
+    empty: 'There is no feedback registered for the last 6 weeks and the graphics are empty.'
+    feedback6Weeks: 'Feedback last 6 weeks (current week not included)'
+    hms6Weeks: 'HMS & Involvement last 6 weeks (current week not included)'
+    feedback6Months: 'Feedback last 6 months'
+    hms6Months: 'HMS & Involvement last 6 months'
+    hms: 'HMS'
+    involvement: 'Involvement'
+    happy: 'Happy'
+    fine: 'Fine'
+    bad: 'Bad'
+    showMonths: 'Last 6 months'
+    showWeeks: 'Last 6 weeks'
+
+  peopleTable:
+    employeeName: 'Employee name'
+    hms: 'HMS'
+    involvement: '% Involvement'
+
+  dashboardPeople:
+    lowRanked: 'View low ranked employees'
+    highRanked: 'View high ranked employees'
+    employeesRank: 'Employees ranking'
+    lowestHms: 'Employees with lowest HMS'
+    lowestInvolvement: 'Employees with lowest involvement'
+    highestHms: 'Employees with highest HMS'
+    highestInvolvement: 'Employees with highest involvement'
+
+  addEmployee:
+    thereAre: "There are %s active employees. Your Beta plan granted you with %s free active employees."
+    importEmployees: 'You will be charged for all extra employees $1 per employee per month. Please'
+    billingArea: 'Billing area'
+    billingDetails: 'check your billing details'
+    thankYou: 'Thank you..'
+    archivedEmployees: 'View archived employees'
+    activeEmployees: 'View active employees'
+    import: 'Import'
+    importPivotal: 'Import employees from your Pivotal Tracker projects.'
+    pivotalTracker: 'Pivotal Tracker'
+    importCsv: 'Import employees from a comma separated file.'
+    avatarId: 'Image (Recommended size: 450x450px.)'
+    uploadCsv: 'Upload csv'
+    addNewEmployee: 'Add new employee'
+    employees: 'Employees'
+    cancel: 'Cancel'
+    addEmployee: 'Add employee'
+    updateEmployee: 'Update employee'
+    selectTeam: 'Select a team'
+    selectLanguage: 'Select a language'
+    nameError: 'Please add a name.'
+    search: 'Search by name'
+    teamError: 'Please associate this employee to a team.'
+    addNewEmployeeInfo: 'Name, email and team are mandatory fields. If the integration with Slack is active and you add the Slack username, this employee will receive the feedback request via Slack. They will also be able to send feedback and/or High 5s via Slack.'
+    backToList: 'Back to employees list'
+
+  employeesEdit:
+    editCurrentEmployee: 'Employee info'
+    editEmployee: 'Update info'
+    editEmployeeInfo: "Name is required."
+    slackWarning: "Please remember that Slack usernames don't allow whitespaces so even if you see yourself in Slack as @my name your Slack username is actually @my.name (with a dot instead of a whitespace)."
+
+  manageEmployee:
+    archivedEmployeesHelp: 'Archived employees are disabled without losing any of their data.'
+    employeeUpdated: 'Employee was updated successfully.'
+    activate: 'Activate'
+    archive: 'Archive'
+    editEmployee: 'Edit'
+
+  employeeRanking:
+    title: 'Employee Ranking'
+    backToDashboard: 'Back to dashboard'
+
+  employeeBadges:
+    title: 'Achievements & awards'
+    backToDashboard: 'Back to dashboard'
+
+  permissionEmployee:
+    managersHelp: "Managers can see the global and employee's dashboards, all feedback and add/remove employees."
+    downgradeUser: 'Downgrade to user'
+    promoteManager: 'Promote to manager'
+    noManager: 'Employee is no longer a manager.'
+    isManager: 'Employee was upgraded to manager successfully.'
+    noPermission: "Sorry, you don't have permission."
+
+  pivotalProject:
+    importMembers: 'Import members'
+
+  pivotalTracker:
+    importEmployees: 'Import employees from Pivotal Tracker'
+    addToken: 'Add your Pivotal Tracker token.'
+    whatIsAToken: 'What is a token?'
+    updateToken: 'Update token'
+    selectProject: 'Select the project from which to import your employees.'
+    wellDone: 'Well done!'
+    importSuccess: 'You successfully imported the employees.'
+    checkOut: 'Check them out'
+    customToken: 'Token'
+
+  employeesCsv:
+    importFile: "Import a file with your employee's info."
+    howTo: 'How to import a csv file'
+    createSpreadsheet: 'Create a spreadsheet with all your employees with the following format:'
+    addOneColumn: 'The first column should contain the email, the second one the employee name and the optional third one the team name. The team will be created if does not exist.'
+    exportFile: 'Press the "choose file" button and select the file (see examples below) you wish to upload and the import process will begin automatically.'
+    requiredFields: 'Email and name are required. Team name is optional.'
+    needHelp: 'If you need help there are two examples below.'
+    exampleTxt: 'Example of spreadsheet file'
+    saveAs: 'Save As... csv file and use comma as field separator'
+    exampleCsv: 'Example of csv file'
+    descriptionCsv: 'Use one line per employee. email, name and team name. Separated by commas. You can (optionally) enclose the text in double quotes.'
+    useComma: 'Use comma as field separator.'
+    employeeName: '"Name of employee %{id}"'
+    employeeEmail: '"name%{id}@yourcompany.com"'
+    teamName: '"Team %{id}"'
+    error: 'Error processing the file. These rows could not be imported.'
+    success: 'Employees created successfully.'
+
+  feedbackItem:
+    loadMore: 'View feedback from this user'
+    replyBy: "%{name} replied on %{date}"
+    reply: 'Reply'
+    stats: 'Stats'
+    markRead: 'Mark as read'
+    1on1: '1on1 note'
+
+  feedbackList:
+    feedback: 'Feedback'
+    viewAll: 'View all'
+    viewNew: 'View new'
+    allEmployees: 'All employees'
+    filterTeam: 'Filter by team'
+    allTeams: 'All teams'
+    noVotes: 'No feedback yet!'
+    noVotesRegistered: 'There is no feedback registered yet.'
+    markAllRead: 'Mark all as read'
+    filterUnread: 'Filtered by unread messages'
+    showAll: 'Showing all messages'
+    date: 'Date'
+    removeFilter: 'Remove filter and view all employees.'
+    employee: 'Employee'
+    comment: 'Comment'
+    options: 'Options'
+    loadMore: 'Load more feedback'
+    addYourReply: 'Add your reply'
+    cancel: 'Cancel'
+    addReply: 'Add reply'
+    1on1Hint: 'Add a comment or note so you can remember mentioning it in your next 1on1.'
+    add1on1: 'Add note'
+    feedbackDescription: 'You have not received any feedback. To start receiving feedback you need to add employees and schedule a periodic request.'
+    feedbackEmployee: 'You have not aswered to any feedback request yet. Check your email or Slack account for feedback requests.'
+    sentOk: 'Your response has been saved. We have notified the employee.'
+    saved1on1Ok: 'Your comment has been saved.'
+    1on1Title: 'New comment'
+    enableFeedback: 'Enable feedback request'
+    addEmployees: 'Add employees'
+
+
+  gettingStarted:
+    welcome: 'Welcome to Happy Mood Score'
+    twoSteps: "Let's start using HMS in just two easy steps."
+    addEmployeesInfo: 'Add your employees info'
+    addEmployees: 'Add employees'
+    employeesText: 'Add the name and email of your employees. Tip: You may download a CSV to speed up the process.'
+    scheduleEmail: 'Schedule delivery'
+    companySettings: 'Company settings'
+    scheduleSelect: 'Select how frequently you want request feedback employees (daily / weekly / monthly).'
+    scheduleFrequency: 'Based on the frequency you select we will send an email to your employees asking them how was their "day/week/month".'
+    informEmployees: "Don't forget to inform your employees about the email they will start to receive."
+
+  high5Activity:
+    giveHigh5: 'Give a High 5'
+    ranking: 'High 5 Ranking'
+    name: 'Name'
+    count: 'Total'
+    received: '# of High 5 received'
+    lastWeek: 'Received in the last week'
+    lastMonth: 'Received in the last month'
+    lastQuarter: 'Received in the last quarter'
+    lastYear: 'Received in the last year'
+    showAll: 'All High 5s'
+    search: 'Search employees'
+
+  hi5EmployeeCount:
+    receivedBy: "High 5s received by %s"
+
+  high5Employee:
+    high5: 'High 5'
+    noHigh5: 'This employee has not received any High 5 yet.'
+    loadMore: 'Load more High 5s'
+
+  hi5Item:
+    givenBy: "Given by %s"
+
+  hi5EmployeeActivity:
+    givenBy: "Given by"
+    at: 'at'
+
+  high5New:
+    giveHigh5: 'Give a High 5 to one of your colleages'
+    giveHigh5Title: 'A High 5 is a recognition you give to a colleague for being helpful, good co-worker, nice team player...'
+    givingHigh5: 'You are giving'
+    aHigh5: 'a High 5!.'
+    appreciation: 'Showing appreciation for your colleagues is a nice thing.'
+    onlyManagerCanSee: 'Only your manager can see this message.'
+    addMessage: "Add a message (it's optional)"
+    cancel: 'Cancel'
+    sendHigh5: 'Send High 5'
+    yourself: "You can't send a High 5 to yourself. ;-)"
+    high5Created: 'Your High 5 has been saved. Thank you for rewarding your teammates!'
+    filterOptions: 'Filter options'
+    viewTeam: 'Only my team mates'
+    viewAll: 'All employees'
+    searchLabel: 'Search by employees'
+    selectAColleague: 'Select a colleague from the list on the left.'
+
+  high5EmployeeVote:
+    giveHigh5: 'Give a High 5'
+
+  ideasList:
+    addNewIdea: 'Add new idea'
+    filterOptions: 'Filter options'
+    lastWeek: 'Last week'
+    lastMonth: 'Last month'
+    lastQuarter: 'Last quarter'
+    lastYear: 'Last year'
+    viewAll: 'View all'
+    ideas: 'Ideas'
+    noIdeasYet: 'There are no Ideas yet.'
+    cancel: 'Cancel'
+    sendIdea: 'Create idea'
+    ideaCreated: "Idea created. Thank you for your contribution."
+
+  ideaShow:
+    toNavigate: 'to navigate'
+    toSelect: 'to select'
+    dismiss: 'esc to dismiss'
+    close: 'close'
+    bold: 'Bold'
+    italic: 'Italic'
+    header: 'Header'
+    strike: 'Strike'
+    code: 'Code'
+    quote: 'Quote'
+    syntaxHelp: 'Format syntax'
+    syntaxOptions: 'Check all formating options'
+    likes: 'Likes'
+    likeIdeaTitle: 'Like this idea'
+    like: "%s Like"
+    like_plural: "%s Likes"
+    comment: "%s Comment"
+    comment_plural: "%s Comments"
+    gladYouLike: 'Glad you like this idea.'
+    writeComment: 'Please write a comment.'
+    commentCreated: 'Comment created'
+    ideaDeleted: 'The idea was deleted successfully.'
+    edit: 'Edit'
+    delete: 'Delete'
+
+  ideaCommentsAdd:
+    comment: 'Add a comment'
+
+  ideasItem:
+    createdBy: 'Created by'
+    votes: 'Votes'
+    comments: 'Comments'
+    lastActivity: 'Last activity'
+
+  ideasNew:
+    title: 'New idea'
+    backToIdeas: 'Show all ideas'
+
+  ideasNewForm:
+    addIdea: 'Add a new idea'
+    addIdeaInfo: 'Add a short descriptive title and a description explaining your idea.'
+    titleError: 'Please add a title'
+    descriptionError: 'Please add a description'
+
+  ideasEditForm:
+    editIdea: 'Edit your idea'
+    sendIdea: 'Update idea'
+    ideaSaved: 'Idea update successfully'
+
+  ideasRemove:
+    title: 'Delete idea'
+    info: 'Comments and votes received by this idea will also be deleted.'
+    cancel: 'Cancel'
+    yesRemove: 'Delete idea'
+
+  todosList:
+    header: '1 on 1 Planner'
+    notes: 'Shared notes'
+    noTodos: 'There are no notes yet.'
+    createdBy: 'Created by'
+    noTodosRegistered: 'You can add your first note now.'
+    filterPeople: 'Filter by person'
+    allPeople: 'View all'
+    add1on1: 'Add note'
+    noEmployee: '--'
+    cancel: 'Cancel'
+    close: 'Close'
+    shared: 'Shared'
+    showActive: 'Show active'
+    showClosed: 'Show closed'
+    todoCreated: 'The note has been created.'
+
+  newTodoForm:
+    1on1Hint: 'Add a note'
+    selectEmployee: 'Select an employee (or leave it blank for none).'
+    description: 'Description'
+    shared: 'Share note'
+    showSharedHelp: 'Shared notes can be seen by other team managers in the user profile page'
+    save1on1: 'Create note'
+
+  dashboardTeams:
+    lowRanked: 'View low ranked teams'
+    highRanked: 'View high ranked teams'
+    teamsRank: 'Teams ranking'
+    lowestHms: 'Teams with lowest HMS'
+    lowestInvolvement: 'Teams with lowest involvement'
+    highestHms: 'Teams with highest HMS'
+    highestInvolvement: 'Teams with highest involvement'
+
+  teamsTable:
+    name: 'Name'
+    employees: '# of employees'
+    teamName: 'Team name'
+    hms: 'HMS'
+    involvement: '% Involvement'
+
+  teamsList:
+    addNewTeam: 'Add new team'
+    teams: 'Teams'
+    addANewTeam: 'Add a new team'
+    editTeam: 'Edit'
+    deleteTeam: 'Delete'
+
+  teamsEdit:
+    editTeam: 'Update team'
+    backToList: 'Teams list'
+    editTeamTitle: 'Modify a team'
+    editTeamInfo: 'Name is a required field.'
+
+  addTeam:
+    title: 'Add a new team'
+    addNewTeam: 'How to add a team'
+    addTeam: 'Add team'
+    addNewTeamInfo: 'Name is a required field.'
+    backToList: 'Teams list'
+
+  signup:
+    toolsYouNeed: 'Keep your employees engaged and happy.'
+    avoidLosingTalent: 'Avoid losing talent!'
+    dashboard: 'Dashboard'
+    ranking: 'Company, Teams & Employees ranking'
+    feedback: 'Feedback & Engagement'
+    high5: 'High 5 (Peer-to-peer rewards)'
+    ideas: 'Ideas'
+    chat: 'Chat rooms'
+    companyName: 'Company name'
+    email: 'Email'
+    activationLink: "We'll send you an activation link."
+    language: 'Language'
+    createAccount: 'Create account'
+    haveAnAccount: 'Already have an account?'
+    logIn: 'Log into your account'
+    linkDelivered: 'Activation link delivered to your email.'
+    thankYou: 'Thank you very much for your interest in HMS.'
+    1on1: '1 on 1 notes'
+    password: 'Password'
+    passwordHint: 'Min. length 8 characters.'
+    passwordError: 'Please, add a valid password. Min. length 8 characters'
+    emailError: 'Please, enter a valid email.'
+    companyError: 'Please, enter a company name.'
+
+  login:
+    logIn: 'Log into your account'
+    email: 'Email'
+    password: 'Password'
+    forgotPassword: 'Forgot Password?'
+    signIn: 'Log In'
+    noAccount: "Don't have an account yet?"
+    createAccount: 'Create an account'
+    yourPassword: 'Forgot your password? No problem!'
+    enterEmail: 'Enter your e-mail address below and we will send you a link to reset your password'
+    cancel: 'Cancel'
+    resetPassword: 'Reset my password'
+    needUserAndPassword: 'Please enter a valid email and a password.'
+    emailNotRegistered: 'That email is not registered in our database. You can create a new account.'
+    emailSent: 'Please check your email for reset instructions.'
+
+  resetPassword:
+    subject: 'Reset password instructions'
+    header: 'Enter a new password'
+    password: 'Password'
+    passwordConfirmation: 'Password confirmation'
+    passwordHint: 'Min. length 8 characters.'
+    passwordError: 'Please, add a valid password. Min. length 8 characters.'
+    passwordConfirmationError: "Please ensure both passwords are equal."
+    submit: 'Change password'
+    login: 'Log into your account'
+    invalidToken: 'The token is invalid or has expired. Request a new password again.'
+    resetSuccessfull: 'Your password has been updated. You can now login with your new password.'
+
+
+  voteComment:
+    sendFeedback: 'Send feedback'
+    goodFeedback: 'A good feedback message should include: Accomplishments, pending tasks, work planned and other info. Only the team manager can see this message.'
+    feedbackPlaceholder: 'Your feedback (5 lines max.)'
+    feedbackHelpTitle: 'How to use Happy Mood Score'
+    feedbackHelp: 'Do you need help?'
+    rewards: 'Peer-to-peer rewards'
+    giveReward: 'Give a High 5 to one of your colleages'
+    high5Explanation: 'Is someone a nice team player, a supportive person, good co-worker? Show your appreciation with a High 5.'
+    giveHigh5: 'Give a High 5'
+    startConversation: 'Start the conversation'
+    shareYourIdeas: 'Share your ideas'
+    ideasExplanation: "An interesting blog post, a new tool, some ideas for improvements?. Share anything you want or vote and comment other people's ideas."
+    feedbackSaved: 'Feedback saved successfully. Thank you.'
+
+  sideAdmin:
+    dashboard: 'Dashboard'
+    globalStats: 'Global stats'
+    teamsRanking: 'Teams ranking'
+    employeesRanking: 'Employees ranking'
+    feedback: 'Feedback'
+    high5: 'High 5'
+    polls: 'Polls'
+    chat: 'Chat'
+    ideas: 'Ideas'
+    activity: 'My activity'
+    1on1: '1 on 1 notes'
+
+  sideUser:
+    dashboard: 'Dashboard'
+    feedback: 'Feedback'
+    high5: 'High 5'
+    chat: 'Chat'
+    ideas: 'Ideas'
+    activity: 'Activity'
+
+  mainNavigation:
+    toggleNavigation: 'Toggle navigation'
+
+  layoutBackend:
+    faq: 'F.A.Q.'
+    poweredBy: ''
+    help: 'Contact Us'
+    status: 'Status'
+    statusTitle: 'Change log'
+    companyTitle: 'Team management and employee engagement'
+    toggleNavigation: 'Toggle navigation'
+    accountSuspended: 'Your account has been suspended'
+    pleaseUpdate: 'To continue using Happy Mood Score please update your'
+    billingInformation: 'billing information'
+    needHelp: 'If you need help, please'
+    contactUs: 'Contact Us'
+    avoidInterruption: 'To avoid an interruption of the service, please update your'
+
+  notFound:
+    pageNotFound: 'Page not found'
+    sorry: "Sorry, we couldn't find that page. The address is wrong or that page still doesn’t exist."
+    returnHome: 'Return Home'
+
+  topUser:
+    settings: 'Settings'
+    employees: 'Employees'
+    teams: 'Teams'
+    company: 'Company info'
+    points: 'points'
+    contactUs: 'Contact Us'
+    logOut: 'Log Out'
+    editEmployee: 'Edit info'
+    achievements: 'Achievements'
+    activities: 'Activities'
+    rewards: 'Rewards'
+    rules: 'Rules'
+    events: 'Events'
+
+  autoForm:
+    companyCreated: 'Company created successfully.'
+    companyUpdated: 'Company updated successfully.'
+    projectsAvailable: 'projects available.'
+    emailExists: 'Please, enter another email address. The same email address can not be used by two people.'
+    emailInvalid: 'Please, enter a valid email address.'
+    employeeCreated: 'Employee created successfully.'
+    employeeUpdated: 'Employee updated successfully.'
+    teamCreated: 'Team created successfully.'
+    teamUpdated: 'Team updated successfully.'
+    teamDeleted: 'Team deleted successfully.'
+
+  votesController:
+    feedbackRecorded: 'Your vote has been recorded. Thank you very much.'
+    feedbackError: 'You already gave feedback with this code.'
+
+  unsubscribeController:
+    ok: 'You have been unsubscribed successfully.'
+
+  server:
+    currentSubscriptions:
+      employees: 'Extra employees'
+    createCompany:
+      wrongPassword: 'Please add a password with at least 8 characters.'
+    registerVote:
+      errorMessage: "You've already send feedback or the feedback code is incorrect."
+    addFeedback:
+      wrongFeedback: 'Sorry, Feedback must be linked to valid a vote or you already sent feedback with this vote.'
+    deleteCompany:
+      wrongWord: 'Wrong confirmation word. Company not deleted.'
+    manageUser:
+      notUpdated: 'This user can not be updated.'
+    emailUnsubscribe:
+      companyHelp: 'The company has been already unsubscribed from help emails.'
+      employeeWeekly: 'The employee has been already unsubscribed from weekly emails.'
+      employeeOnboarding: 'The employee has been already unsubscribed from onboarding emails.'
+      employeeNewIdeas: 'The employee has been already unsubscribed from new idea emails.'
+      employeeNewChats: 'The employee has been already unsubscribed from new chat emails.'
+    trialAboutToExpire:
+      subject: '[Happy Mood Score] Your trial will end in 3 days'
+    pastDue:
+      subject: '[Happy Mood Score] Update your billing details'
+    cancelled:
+      subject: '[Happy Mood Score] Your account has been suspended'
+    noEmployees8Days:
+      subject: "[Happy Mood Score] Get feedback and improve your team morale"
+    newUserOnboarding:
+      daily: 'day'
+      weekly: 'week'
+      monthly: 'month'
+      day: 'day'
+      week: 'week'
+      month: 'month'
+    newUserDay4Email:
+      subject: '[Happy Mood Score] Chats'
+    newUserDay3Email:
+      subject: '[Happy Mood Score] Ideas'
+    newUserDay2Email:
+      subject: '[Happy Mood Score] Peer-to-peer rewards'
+    newUserDay1Email:
+      subject: '[Happy Mood Score] How to give feedback'
+    accountActivateEmail:
+      subject: '[Happy Mood Score] Activate your new account'
+    accountActivatedEmail:
+      subject: '[Happy Mood Score] Your account has been activated'
+    newIdeaEmail:
+      subject: "[%{company_name}] New Idea Added"
+    feedbackReplyEmail:
+      subject: "[%{company_name}] Your feedback has got a reply"
+    newChatEmail:
+      subject: "[%{company_name}] You've been invited to a new chat room"
+    hi5EmployeeEmail:
+      subject: "[%{company_name}] You have received a new High 5"
+    achievementEmployeeEmail:
+      subject: "[%{company_name}] Your activity summary"
+    sendEmailToEmployee:
+      subject: "[%{company_name}] How was your %{period_name}?"
+    sendSlackToEmployee:
+      subject: "How was your %{period_name}?"
+    sendWeeklySummary:
+      subject: "[%{company_name}] Your weekly activity summary"
+    sendUserWeeklySummary:
+      subject: "[%{company_name}] Your weekly activity summary"
+    addIdea:
+      errorMessage: "You need to be an employee to add ideas."
+    addHigh5:
+      errorMessage: 'This High 5 can not be registered.'
+    addChat:
+      errorMessage: "You need to be an employee to start a chat."
+    v2api:
+      blankId: 'ID can not be empty.'
+      noPermission: "Sorry, but you don't have permission."
+    dashboardApi:
+      wrongUser: 'The user does not belong to a company'
+      wrongEmployee: 'Employee is not valid'
+      wrongTeam: 'Team is not valid'
+    teamsApi:
+      wrongTeamId: 'Wrong team ID.'
+      blankId: 'Team ID can not be blank.'
+    prizesApi:
+      wrongTeamId: 'Wrong prize ID.'
+    prizeId:
+      blankId: 'Prize ID can not be blank.'
+    rewardsApi:
+      wrongTeamId: 'Wrong reward ID.'
+    rulesApi:
+      wrongTeamId: 'Wrong rule ID.'
+    high5Api:
+      noReceiver: 'Receiver ID can not be blank.'
+      wrongReceiverId: 'The ID of the receiver is not valid.'
+      wrongUserId: 'The ID of the authenticated user is not valid.'
+      wrongSenderId: 'The ID of the sender is not valid.'
+    feedbackApi:
+      selectOneOption: 'Select one option'
+      worseThanExpected: 'Worse than expected'
+      asExpected: 'As expected'
+      betterThanExpected: 'Better than expected'
+    employeesApi:
+      emailExists: 'Email already exists.'
+      wrongInfo: 'Employee can not be added.'
+      wrongId: 'Wrong employee ID.'
+      noPermission: "You don't have permission to add employees."
+      wrongTeamId: "Invalid team ID."
+      blankEmployeeId: 'Employee ID can not be blank.'
+    accountApi:
+      cancelled: 'To continue using this account please update your payment settings. Thank you.'
+    addActivity:
+      achievement: "has been rewarded with a new %s: %s"
+      reward: 'has given a High 5'
+    accountActivatedMessage:
+      errorMessage: "Can't send an empty email"
+    acceptInvitation:
+      teamManager: 'Team Manager'
+    slackFeedback:
+      noResult: 'Invalid update.'
+      received: 'Your status update has been received. Thank you! You can now send a feedback message explaining your status. Type /report and write your message.'
+      wrongVote: 'You have already send your vote for this request.'
+      wrongRequest: 'Request not valid'
+      feedbackSaved: "Your feedback has been saved. Thank you very much for your contribution."
+    slackHigh5:
+      zero: "Sorry, no valid receivers were found. Remember that you can't send a High 5 to yourself. ;-)"
+      one: 'Your High 5 has been saved.'
+      many: 'Your High 5s have been saved.'
+    slackTodo:
+      zero: 'Sorry, no valid receivers were found.'
+      one: 'Your note for 1 on 1 has been saved.'
+      many: 'Your notes for 1 on 1 have been saved.'
+  userTrends:
+    lastVote: 'Your last feedback'
+    engagement: 'Engagement'
+    high5Received: 'High 5s received'
+    high5Given: 'High 5s given'
+    high5Total: 'High 5s'
+    high5TotalWeek: 'High 5s last week'
+    commentsWeek: 'Comments last week'
+    commentsTotal: 'Comments'
+    feedbackComments: 'Feedback with comments'
+    high5ReceivedWeek: 'High 5s received last week'
+    high5GivenWeek: 'High 5s given last week'
+    companyInfo: 'in your company:'
+    teamInfo: 'in your team'
+    ranked: 'You are ranked'
+    yourRanking: 'ranking'
+    excellent: 'Excellent'
+    normal: 'Good'
+    low: 'Low'
+
+  pollContent:
+    title: 'What do you want to ask to your customers?'
+
+  pollsIndex:
+    title: 'Polls'
+    name: 'Name'
+    active: 'Active'
+    inactive: 'Inactive'
+    startAt: 'Begin'
+    endAt: 'End'
+    hms: 'HMS'
+    votes: 'Votes'
+    feedback: 'Answers'
+    remove: 'Delete'
+    nameRequired: 'Please add a name to the poll.'
+    invalidDate: 'Please enter a valid date.'
+    isActive: 'Active'
+    isClosed: 'Closed'
+    notFound: 'The requested page is not active.'
+    addNew: 'Create poll'
+    addNewIdea: 'New poll'
+    cancel: 'Cancel'
+    sendPoll: 'Create poll'
+    pollCreated: 'Poll created successfully.'
+    removeTitle: 'Delete poll'
+    removePoll: 'If you delete the poll all the answers received will be removed. This action can not be undone.'
+    yesRemove: 'Delete poll'
+    noPoll: 'There are no polls yet. Create one and start receiving feedback.'
+    publicUrl: 'Public link'
+    settingsTitle: 'How to name a poll'
+    settingsInfo: 'This name will be visible in the public address that you will share with your visitors to request feedback. It can not be changed.'
+    settingsExtra: 'For example, if you name your poll New website design the public url of your poll will be:'
+    backToList: 'Back to polls'
+    nameHint: ''
+
+  pollsShow:
+    totalVotes: 'Vote distribution'
+    noFeedback: 'This poll has not received any feedback yet.'
+    empty: 'Only active polls can receive feedback from visitors.'
+    feedback6Weeks: 'Last 6 weeks'
+    editContent: 'Edit'
+    from: 'Origin'
+    viewPage: 'View public page (new tab)'
+    list: 'Feedback received'
+    message: 'Comment'
+
+  pollEdit:
+    titleRequired: 'Please add a title requesting your customers opinion.'
+    descriptionRequired: 'Please add a description explaining your customers how to vote.'
+    questionRequired: 'Please ensure all posible answers have a description.'
+    pollActive: 'The poll has been activated. Visitors can now vote and send their feedback.'
+    pollStopped: 'The poll has been stopped. Remember that you can reactivate the poll anytime.'
+    notFound: 'This poll has finished. Your feedback was not saved.'
+    maxPollsReached: 'You have reached the maximum amount of polls active for your service plan. Please upgrade your account to have unlimited polls.'
+
+  pollVote:
+    optionalComment: 'You can leave an optional comment'
+    sendFeedback: 'Send feedback'
+    invalidVote: 'Sorry, there was a problem with the feedback provided.'
+    invalidResult: 'Please select a valid option.'
+    success: 'Your feedback has been saved. We appreciate your time.'
+    thankYou: 'Thank you for your vote.'
+
+  pollDelete:
+    notActive: 'You can not delete an active poll. Please change it to inactive first.'
+    success: 'Poll deleted successfully.'
+
+  editContentForm:
+    header: 'Edit'
+    category: 'Category'
+    categoryHelp: 'Group related polls together. You will be able to see statistics grouped by category.'
+    title: 'Question'
+    titleHelp: 'What do you want to ask your visitors? Example: How was our last event?'
+    titleRequired: 'Please add a title'
+    description: 'Description'
+    descriptionHelp: 'Explain your visitors why you are requesting the info, ask for additional comments...'
+    descriptionRequired: 'Please add a description'
+    showComments: 'Show comments'
+    showCommentsHelp: "If checked, we'll show a text area where visitors could add extra comments."
+    question: 'Question'
+    question30Help: 'Example: It was awesome.'
+    question20Help: 'Example: It was ok.'
+    question30: 'Positive choice'
+    question20: 'Neutral choice'
+    question10: 'Negative choice'
+    question10Help: 'Example: It can be improved.'
+    cancel: 'Cancel changes'
+    save: 'Save changes'
+    contentUpdated: 'Poll udpated successfully.'
+    pleaseSolveErrors: 'Please check that all errors are fixed.'
+    titleRequired: 'Question is required.'
